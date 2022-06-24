@@ -1,0 +1,877 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> 서리라 | 다시 일어서리라 </title>
+    <link href="css/pc.css" rel="stylesheet" type="text/css" />
+    <link href="css/note.css" rel="stylesheet" type="text/css" />
+    <link href="css/tab.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobile.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobile_2.css" rel="stylesheet" type="text/css" />
+    <link href="css/moblie_3.css" rel="stylesheet" type="text/css" />
+    <link href="css/swiper.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="img/main/web_logo.ico" type="image/x-icon">
+    <style>
+        * { margin: 0; padding: 0; }
+        ul, li { list-style: none;}
+        a { text-decoration: none; font-family: 'Roboto', sans-serif; }
+        img { float: left; border: 0; }
+        .fixed_wrap>.top_header>#menu_wrap>li.navi_on { transform: scale(1.2, 1.2); font-weight: 600; color: #161616; }
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+    </style>
+    <script src="js/jquery.js" ></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            var ww=$(window).width();
+            var wh=$(window).height();
+            
+            $('html,#con_wrap,#con_wrap>section').css({
+                width:ww,
+                height:wh
+            });
+            
+            
+            
+            
+            $(window).resize(function(){
+                
+                var ww=$(window).width();
+                var wh=$(window).height();
+                $('html,#con_wrap,section').width(ww);
+                $('html,#con_wrap,section').height(wh);
+            });
+            
+            
+            /*   스크롤한만큼 다음 페이지 이동   */
+            
+            
+            $('body,html').stop().animate({
+                scrollTop:0
+            });
+            
+            $(window).scroll(function(){
+                var scroll=$(this).scrollTop();
+                $('.scroll').text(scroll);
+                
+                $('#con_wrap>#section_1').css({'transform':'translateZ('
+                                               +(0+scroll)+'px)'});
+                $('#con_wrap>#section_2').css({'transform':'translateZ('+(-3000+scroll)+'px)'});
+                $('#con_wrap>#section_3').css({'transform':'translateZ('+(-6000+scroll)+'px)'});
+                $('#con_wrap>#section_4').css({'transform':'translateZ('+(-9000+scroll)+'px)'});
+                $('#con_wrap>#section_5').css({'transform':'translateZ('+(-12000+scroll)+'px)'});
+                $('#con_wrap>#section_6').css({'transform':'translateZ('+(-15000+scroll)+'px)'});
+                
+                
+                if(scroll>=900) {
+                    $('#navi_icon_wrap').fadeOut();
+                }else if(scroll<900) {
+                    $('#navi_icon_wrap').fadeIn();
+                }
+                
+            });
+            /*   스크롤 이벤트   */
+            
+            
+            
+            
+            $('.navi').click(function(){
+                var page=$(this).index();
+                $('body,html').stop().animate({
+                    'scrollTop':3000*page
+                });
+                $(this).addClass('navi_on');
+                $(this).siblings().removeClass('navi_on');
+            });
+            
+            /*       네비 클릭시 해당 페이지로 이동       */
+            
+            
+            var i=0;
+            $('.right_arrow').click(function() { 
+                
+                i++;
+                if(i>2){
+                    i=0
+                }
+                
+                $('#img_wrap').animate({
+                    top:-i*wh
+                });
+                
+            });
+            
+            
+            $('.left_arrow').click(function() { 
+                i--;
+                if(i<0){
+                    i=2
+                }
+                
+                $('#img_wrap').animate({
+                    top:-i*wh
+                });
+               
+            });
+            
+            /*   ----포트폴리오 슬라이드-----------   */
+            
+            
+            
+            
+            var click_num = 1;
+            
+            
+            $('#design_box').hide();
+            
+            $('#section_5 .img_but').click(function(){
+                
+                $('#design_box').slideDown('800');          
+            });//click_end
+            
+            $('#img_close').click(function(){
+                $('#design_box').slideUp('800');
+            });//click_end
+            
+            
+            $('#but_1').click(function(){
+                
+                $('#design_box img').attr({
+                    src:'img/work/nike_pc.jpg',
+                    alt:'나이키 모바일 버전'
+                });
+                
+            });
+            
+            
+            $('#but_2').click(function(){
+                
+                $('#design_box img').attr({
+                    src:'img/work/nike_mobile.jpg',
+                    alt:'나이키 모바일 버전'
+                });
+                
+            });
+            
+            $('#but_3').click(function(){
+                
+                $('#design_box img').attr({
+                    src:'img/work/mcdonald.jpg',
+                    alt:'나이키 모바일 버전'
+                });
+                
+            });     
+            
+            $('#but_6').click(function(){
+                
+                $('#design_box img').attr({
+                    src:'img/work/tefal_mobile.jpg',
+                    alt:'테팔 모바일 버전'
+                });
+                
+            }); 
+            
+            /*   디자인 박스 이벤트   */
+            
+            
+            
+            
+            
+            
+            
+            /*-------------------------m_wrap 이벤트-----------------------------*/
+            
+            
+            $(window).resize(function(){
+                var ww=$(window).width();
+                $('#m_wrap').width(ww);
+            });
+            /*      리사이즈    */
+            
+            
+            var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            /*      스와이프    */
+            
+            
+            
+            $('#m_menu_box').css({
+                left:-ww
+            });
+            
+            $('#m_menu_icon').click(function(){
+                $('#m_menu_box').animate({
+                    left:0
+                });
+            });
+            
+            $('#close').click(function(){
+                $('#m_menu_box').animate({
+                    left:-ww
+                });
+            });
+            /*   카테고리 클릭시 메뉴 나옴   */
+            
+            
+            
+            
+            $('.touch_box').css({
+                height:wh
+            });
+            
+            setTimeout(function(){
+                $('.touch_box').hide();
+            },1500);
+            /*   모바일 버전 터치 아이콘   */
+            
+        });//readyend
+    </script>
+</head>
+
+<body>
+    
+    <div id="wrap">
+        <!--<div id="start_box"></div>-->
+        
+        <div class="fixed_wrap">
+            <header class="top_header">
+                <h1 id="logo">
+                    <a href="index.html">
+                        <img src="img/main/logo.png" alt="로고" />
+                    </a>
+                </h1>
+                <ul id="menu_wrap">
+                    <li class="navi navi_on eng_font">HOME</li>
+                    <li class="navi eng_font">PROFILE</li>
+                    <li class="navi eng_font">SKILL</li>
+                    <li class="navi eng_font">PROTFOLIO</li>
+                    <li class="navi eng_font">WORK</li>
+                    <li class="navi eng_font">CONTACT</li>
+                </ul>
+            </header>
+        </div>
+        
+        <div id="navi_icon_wrap">
+            <div class="navi_click_icon"></div>
+        </div>
+        
+        
+        <div id="con_wrap">
+            <section id="section_1">
+                <div class="width_align">
+                    <div class="position_box">
+                        <div class="bg_box">
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                            <div class="ball"></div>
+                        </div>
+                        <div class="text_box">
+                            <div class="top_text">
+                                <span class="eng_font">WEB</span>
+                                <span class="eng_font">Designer</span>
+                            </div>
+                            <div class="bottom_text">
+                                <span class="eng_font">&</span>
+                                <span class="eng_font">Publisher</span>
+                            </div>
+                        </div>
+                        <div class="img_box">
+                            <div class="me">
+                                <img src="img/main/me.png" alt="" />
+                            </div>
+                            <div class="name">
+                                <h4 class="kor_font">다시 일어서리라</h4>
+                                <div class="box">
+                                    <img src="img/main/name.png" alt="" />
+                                </div>
+                            </div>
+                            <h3 class="copy eng_font">Copyright 2018 SEO RI RA. All Rights Reserved.</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--        section_1 끝     -->
+            
+            
+            
+            <section id="section_2">
+                <div class="width_align">
+                    <div class="img_box"></div>
+                    <div class="text_box">
+                        <h3 class="title eng_font">PROFILE</h3>
+                        <div class="white_line"></div>
+                        <p class="con_text kor_font">서리라<br/>25세 (1994)<br/>경남대학교 문화콘텐츠학과 졸업<br/>SBS아카데미컴퓨터아트학원 부산점 웹학과 수료<br/>hjk369hjk@hanmail.net<br/>GTQ·GTQi 2급</p>
+                    </div>
+                </div>
+            </section>
+            <!--        section_2 끝     -->
+            
+            <section id="section_3">
+                <div class="width_align">
+                    <h3 class="title eng_font">SKILL</h3>
+                    <div class="con_wrap">
+                        <div class="con">
+                            <div class="top"></div>
+                            <div class="main">
+                                <h3 class="nom eng_font">01.</h3>
+                                <div class="icon_box"></div>
+                                <h3 class="top_text eng_font">Photoshop</h3>
+                                <div class="white_line"></div>
+                                <h3 class="bottom_text kor_font">사진 편집 및 합성,<br/>배너 및 웹 디자인</h3>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <div class="con">
+                            <div class="top"></div>
+                            <div class="main">
+                                <h3 class="nom eng_font">02.</h3>
+                                <div class="icon_box"></div>
+                                <h3 class="top_text eng_font">Illustrator</h3>
+                                <div class="white_line"></div>
+                                <h3 class="bottom_text kor_font">로고, 아이콘 등 제작</h3>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <div class="con">
+                            <div class="top"></div>
+                            <div class="main">
+                                <h3 class="nom eng_font">03.</h3>
+                                <div class="icon_box"></div>
+                                <h3 class="top_text eng_font">HTML·CSS</h3>
+                                <div class="white_line"></div>
+                                <h3 class="bottom_text kor_font">각종 태그 및 CSS 속성 사용</h3>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <div class="con">
+                            <div class="top"></div>
+                            <div class="main">
+                                <h3 class="nom eng_font">04.</h3>
+                                <div class="icon_box"></div>
+                                <h3 class="top_text eng_font">jQuery</h3>
+                                <div class="white_line"></div>
+                                <h3 class="bottom_text kor_font">슬라이드 배너, 메뉴 효과,<br/>마우스휠 등 이벤트 효과</h3>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--        section_3 끝     -->
+            
+            
+            
+            <section id="section_4">
+                <div class="width_align">
+                    <div id="mask">
+                        <div id="img_wrap">
+                        <div class="con">
+                            <div class="left_box">
+                                <a href="../maximcoffee/index.html" target="_blank">
+                                    <div class="img_box"></div>
+                                </a>
+                            </div>
+                            <div class="text_box">
+                                <h3 class="title kor_font">01. 맥심커피</h3>
+                                <div class="white_line"></div>
+                                <p class="con_text kor_font">적용기반 : 반응형 웹</p>
+                                <p class="con_text kor_font">표현기간 : 2.5주</p>
+                                <p class="con_text kor_font">제작기간 : 2주</p>
+                                <div class="color_box">
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="con">
+                            <div class="left_box">
+                                <a href="../innisfree/index.html" target="_blank">
+                                    <div class="img_box"></div>
+                                </a>
+                            </div>
+                            <div class="text_box">
+                                <h3 class="title kor_font">02. 이니스프리</h3>
+                                <div class="white_line"></div>
+                                <p class="con_text kor_font">적용기반 : 반응형 웹</p>
+                                <p class="con_text kor_font">표현기간 : 1주</p>
+                                <p class="con_text kor_font">제작기간 : 1주</p>
+                                <div class="color_box">
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="con">
+                            <div class="left_box">
+                                <a href="../tefal/index.html" target="_blank">
+                                    <div class="img_box"></div>
+                                </a>
+                            </div>
+                            <div class="text_box">
+                                <h3 class="title kor_font">03. 테팔</h3>
+                                <div class="white_line"></div>
+                                <p class="con_text kor_font">적용기반 : 반응형 웹</p>
+                                <p class="con_text kor_font">표현기간 : 4일</p>
+                                <p class="con_text kor_font">제작기간 : 4일</p>
+                                <div class="color_box">
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--<div class="con">
+                            <div class="left_box">
+                                <a href="../horror/index.html" target="_blank">
+                                    <div class="img_box"></div>
+                                </a>
+                            </div>
+                            <div class="text_box">
+                                <h3 class="title kor_font">04. 포트폴리오</h3>
+                                <div class="white_line"></div>
+                                <p class="con_text kor_font">적용기반 : 반응형 웹</p>
+                                <p class="con_text kor_font">표현기간 : 1주</p>
+                                <p class="con_text kor_font">제작기간 : 2주</p>
+                                <div class="color_box">
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                </div>
+                            </div>
+                        </div>-->
+                        
+                    </div>
+                </div>
+                <div class="left_arrow kor_font">&lt;</div>
+                <div class="right_arrow kor_font">&gt;</div>
+                </div>
+            </section>
+            <!--        section_4 끝     -->
+            
+            <article id="design_box">
+                <div class="width_align">
+                    <div id="img_close" class="kor_font">닫기</div>
+                    <div class="img_box">
+                        <img src="img/work/nike_pc.jpg" alt="나이키 pc버전" />
+                    </div>
+                    
+                </div>
+                
+            </article>
+            
+            <section id="section_5">
+                <div class="width_align">
+                    <h3 class="title eng_font">WORK</h3>
+                    <div class="con_wrap">
+                        <ul class="width_box">
+                            <li class="con_box">
+                                <img src="img/work/img_1.jpg" alt="나이키_pc" />
+                                <div class="hide_box"></div>
+                                <div class="text_box">
+                                    <h3 class="title kor_font">나이키 리뉴얼 (PC)</h3>
+                                    <span class="text kor_font">코딩 준비중...</span>
+                                    <div class="but_wrap">
+                                        <div id="but_1" class="but img_but kor_font">이미지 크게 보기</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_box">
+                                <img src="img/work/img_2.jpg" alt="나이키_mobile" />
+                                <div class="hide_box"></div>
+                                <div class="text_box">
+                                    <h3 class="title kor_font">나이키 리뉴얼 (mobile)</h3>
+                                    <span class="text kor_font">코딩 준비중...</span>
+                                    <div class="but_wrap">
+                                        <div id="but_2" class="but img_but kor_font">이미지 크게 보기</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_box">
+                                <img src="img/work/img_3.jpg" alt="맥도날드_pc" />
+                                <div class="hide_box"></div>
+                                <div class="text_box">
+                                    <h3 class="title kor_font">맥도날드 리뉴얼 (PC)</h3>
+                                    <span class="text kor_font">코딩 및 모바일버전 디자인 준비중...</span>
+                                    <div class="but_wrap">
+                                        <div id="but_3" class="but img_but kor_font">이미지 크게 보기</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="width_box">
+                            
+                            <li class="con_box">
+                                <img src="img/work/img_4.jpg" alt="책넘기기" />
+                                <div class="hide_box"></div>
+                                <div class="text_box">
+                                    <h3 class="title kor_font">책 넘기기 구현</h3>
+                                    <span class="text kor_font">transform, transition 활용하여 책 넘기는 효과 구현<br/>※소스 없이 기본 플러그인 연결로 직접 구현함※</span>
+                                    <div class="but_wrap">
+                                        <div id="but_4" class="but kor_font"><a href="http://standup.dothome.co.kr/index.html" target="_blank">자세히 보기</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_box">
+                                <img src="img/work/img_5.jpg" alt="클리핑 마스크 따라하기" />
+                                <div class="hide_box"></div>
+                                <div class="text_box">
+                                    <h3 class="title kor_font">클리핑 마스크</h3>
+                                    <span class="text kor_font"><a href="http://www.muttagency.com/" target="_blank" title="클릭시 외국 사이트로 이동">외국 사이트</a> 분석한 후, 따라 구현해봄<br/>※이미지 및 디자인은 위 사이트 그대로 사용※</span>
+                                    <div class="but_wrap">
+                                        <div id="but_5" class="but kor_font"><a href="ect/index.html" target="_blank">자세히 보기</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--    section_5 끝    -->
+            
+            
+            
+            
+            <section id="section_6">
+                <div class="width_align">
+                    <div class="title eng_font">CONTACT ME</div>
+                    <div class="con_wrap">
+                        <div class="con">
+                            <div class="icon_box_wrap">
+                                <div class="icon_box"></div>
+                            </div>
+                            <h4 class="top_text eng_font">E-MAIL</h4>
+                            <div class="white_line"></div>
+                            <div class="bottom_text eng_font">h**36*h**@hanmail.net</div>
+                        </div>
+                        <div class="con">
+                            <div class="icon_box_wrap">
+                                <div class="icon_box"></div>
+                            </div>
+                            <h4 class="top_text eng_font">KAKAO TALK</h4>
+                            
+                            <div class="white_line"></div>
+                            <div class="bottom_text eng_font">sb**8</div>
+                        </div>
+                        <div class="con">
+                            <div class="icon_box_wrap">
+                                <div class="icon_box"></div>
+                            </div>
+                            <h4 class="top_text eng_font">INSTAGRAM</h4>
+                            <div class="white_line"></div>
+                            <div class="bottom_text eng_font">s*ia***ia</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--        section_5 끝     -->
+            
+            
+            
+        </div> 
+        
+    </div>
+    <!--   pc~note 끝     -->
+    
+    
+    <div id="m_wrap" class="swiper-container">
+        <header id="m_header">
+            <div id="m_menu_icon"></div>
+            <h1 id="m_logo"></h1>
+        </header>
+        
+        <section class="touch_box">
+            <div class="wrap">
+                <div class="arrow">
+                </div>
+                <div class="touch"></div>
+            </div>
+        </section>
+        
+        <div id="m_menu_box">
+            <div id="m_menu_header">
+                <h1 id="close"></h1>
+                <h1 id="m_logo"></h1>
+            </div>
+            <div id="m_menu_section">
+                <div class="menu_wrap">
+                    <div class="main eng_font">MAIN</div>
+                </div>
+                <div class="menu_wrap">
+                    <div class="main eng_font">PROFILE</div>
+                </div>
+                <div class="menu_wrap">
+                    <div class="main eng_font">SKILL</div>
+                </div>
+                <div class="menu_wrap">
+                    <div class="main eng_font">PORTFOLIO</div>
+                </div>
+                <div class="menu_wrap">
+                    <div class="main eng_font">CONTACT ME</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="section_wrap" class="swiper-wrapper">
+            <section id="m_section_1" class="swiper-slide test">
+                <div class="width_align">
+                    <div class="top_box">
+                        <div class="text_wrap">
+                            <h4 class="kor_font">다시 일어서리라</h4>
+                        </div>
+                    </div>
+                    <div class="img_box">
+                        <img src="img/m/main/m_main.png" alt="" />
+                    </div>
+                    <div class="bottom_box">
+                        <div class="text_box">
+                            <span class="eng_font">Designer</span>
+                            <span class="eng_font">&</span>
+                            <span class="eng_font">Publisher</span>
+                        </div>
+                    </div>
+                    <h4 class="copy eng_font">Copyright 2018 SEO RI RA. All Rights Reserved.</h4>
+                </div>
+            </section>
+                <!--        메인 이미지, 텍스트 끝       -->
+            <!--        section_1 끝         -->
+            <section id="m_section_2" class="swiper-slide test">
+                <div class="width_align">
+                    <h3 class="title eng_font">PROFILE</h3>
+                    <div class="white_line"></div>
+                    <div class="con_wrap">
+                        <div class="img_box">
+                        </div>
+                        <div class="text_box">
+                            <h4 class="kor_font">
+                                서리라<br/>25세 (1994)<br/>hjk369hjk@hanmail.net<br/>GTQ·GTQi 2급<br/>컴퓨터활용능력 2급<br/>HSK 4·5급
+                            </h4>
+                            <h4 class="kor_font">
+                                서리라 / 25세 (1994) / hjk369hjk@hanmail.net<br/>GTQ·GTQi 2급 / 컴퓨터활용능력 2급 / HSK 4·5급
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="m_section_3" class="swiper-slide test">
+                <div class="width_align">
+                    <h3 class="title eng_font">SKILL</h3>
+                    <div class="white_line"></div>
+                    <div class="con_wrap">
+                        <div class="con">
+                            <div class="top"></div>
+                            <div class="main">
+                                <h3 class="nom eng_font">01.</h3>
+                                <div class="icon_box">
+                                    <img src="img/m/skill/img_1.png" alt="" />
+                                </div>
+                                <h3 class="top_text eng_font">Photoshop</h3>
+                                <div class="white_line"></div>
+                                <h3 class="bottom_text kor_font">사진 편집 및 합성,<br/>배너 및 웹 디자인</h3>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <div class="con">
+                            <div class="top"></div>
+                            <div class="main">
+                                <h3 class="nom eng_font">02.</h3>
+                                <div class="icon_box">
+                                    <img src="img/m/skill/img_2.png" alt="" />
+                                </div>
+                                <h3 class="top_text eng_font">Illustrator</h3>
+                                <div class="white_line"></div>
+                                <h3 class="bottom_text kor_font">로고, 아이콘 등 제작</h3>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <div class="con">
+                            <div class="top"></div>
+                            <div class="main">
+                                <h3 class="nom eng_font">03.</h3>
+                                <div class="icon_box">
+                                    <img src="img/m/skill/img_3.png" alt="" />
+                                </div>
+                                <h3 class="top_text eng_font">HTML·CSS</h3>
+                                <div class="white_line"></div>
+                                <h3 class="bottom_text kor_font">각종 태그 및 CSS 속성 사용</h3>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <div class="con">
+                            <div class="top"></div>
+                            <div class="main">
+                                <h3 class="nom eng_font">04.</h3>
+                                <div class="icon_box">
+                                    <img src="img/m/skill/img_4.png" alt="" />
+                                </div>
+                                <h3 class="top_text eng_font">jQuery</h3>
+                                <div class="white_line"></div>
+                                <h3 class="bottom_text kor_font">슬라이드 배너, 메뉴 효과,<br/>마우스 휠 등 효과</h3>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="m_section_4" class="swiper-slide test">
+                <div class="width_align">
+                    <h3 class="title eng_font">PROTFOLIO</h3>
+                    <div class="white_line"></div>
+                    <div class="con_wrap">
+                        <div class="con">
+                            <div class="img_box">
+                                <a href="../maximcoffee/index.html" target="_blank">
+                                    <img src="img/portfolio/maxim_coffee.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="text_box">
+                                <div class="text_wrap">
+                                    <div class="text_box">
+                                        <h3 class="title kor_font">01. 맥심커피</h3>
+                                        <p class="con_text kor_font">적용기반 : 반응형 웹</p>
+                                        <p class="con_text kor_font">표현기간 : 2.5주</p>
+                                        <p class="con_text kor_font">제작기간 : 2주</p>
+                                        <div class="color_box">
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="con">
+                            <div class="img_box">
+                                <a href="../innisfree/index.html" target="_blank">
+                                    <img src="img/m/portfolio/img_2.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="text_box">
+                                <div class="text_wrap">
+                                    <div class="text_box">
+                                        <h3 class="title kor_font">02. 이니스프리</h3>
+                                        <p class="con_text kor_font">적용기반 : 반응형 웹</p>
+                                        <p class="con_text kor_font">표현기간 : 1주</p>
+                                        <p class="con_text kor_font">제작기간 : 1주</p>
+                                        <div class="color_box">
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="con">
+                            <div class="img_box">
+                                <a href="../horror/index.html" target="_blank">
+                                    <img src="img/portfolio/tefal.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="text_box">
+                                <div class="text_wrap">
+                                    <div class="text_box">
+                                        <h3 class="title kor_font">03. 포트폴리오</h3>
+                                        <p class="con_text kor_font">적용기반 : 반응형 웹</p>
+                                        <p class="con_text kor_font">표현기간 : 1주</p>
+                                        <p class="con_text kor_font">제작기간 : 2주</p>
+                                        <div class="color_box">
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--<div class="con">
+                            <div class="img_box">
+                                <img src="img/m/portfolio/img_2.png" alt="" />
+                            </div>
+                            <div class="text_box">
+                                <div class="text_wrap">
+                                    <div class="text_box">
+                                        <h3 class="title kor_font">04. 맥심커피</h3>
+                                        <p class="con_text kor_font">적용기반 : 반응형 웹</p>
+                                        <p class="con_text kor_font">표현기간 : 2.5주</p>
+                                        <p class="con_text kor_font">제작기간 : 2주</p>
+                                        <div class="color_box">
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                            <div class="color"></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </section>
+            <section id="m_section_5" class="swiper-slide test">
+                <div class="width_align">
+                    <h3 class="title eng_font">CONTACT ME</h3>
+                    <div class="white_line"></div>
+                    <div class="con_wrap">
+                        <div class="con">
+                            <div class="icon_box_wrap">
+                                <div class="icon_box"></div>
+                            </div>
+                            <h4 class="top_text eng_font">MAIL</h4>
+                            <div class="white_line"></div>
+                            <div class="bottom_text eng_font">h**36*h**@hanmail.net</div>
+                        </div>
+                        <div class="con">
+                            <div class="icon_box_wrap">
+                                <div class="icon_box"></div>
+                            </div>
+                            <h4 class="top_text eng_font">KAKAO TALK</h4>
+                            <div class="white_line"></div>
+                            <div class="bottom_text eng_font">sb**8</div>
+                        </div>
+                        <div class="con">
+                            <div class="icon_box_wrap">
+                                <div class="icon_box"></div>
+                            </div>
+                            <h4 class="top_text eng_font">INSTAGRAM</h4>
+                            <div class="white_line"></div>
+                            <div class="bottom_text eng_font">s*ia*g*ia</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> 서리라 ㅣ 책 넘기는 효과 </title>
+    <link rel="shortcut icon" href="img/web_logo.ico" type="image/x-icon">
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/kopubbatang.css);
+        
+        html,body { width: 100%; height: 100%; overflow: hidden; font-family: 'KoPub Dotum'; color: #111; }
+        
+        * { margin: 0; padding: 0; }
+        
+        
+        #bg { width: 100%; height: 100%; position: fixed; top: 0; left: 0; background-image: url(img/clouds-1840568_1920.jpg); background-repeat: no-repeat; background-size: cover; }
+        
+        
+        /*   wrap   */
+        #wrap { width: 500px; height: 600px; position: relative; top: 50%; margin-top: -300px; left: 50%; margin-left: -250px; transform-style: preserve-3d; perspective: 1500px; z-index: 1; }
+        
+        
+        /*   page   */
+        .page { width: 500px; height: 600px; position: absolute; z-index: 1; transform-origin: left; box-shadow: 2px 2px 3px 0px #111, 0px 0px 0px 0px #fff; }
+        
+        .page:nth-child(1) { z-index: 5; }
+        
+        .page:nth-child(2) { z-index: 4; }
+        
+        .page:nth-child(3) { z-index: 3; }
+        
+        .page:nth-child(4) { z-index: 2; }
+        
+        
+        /*   in_page   */
+        
+        .in_page:first-child { width: 100%; height: 100%; background-color: #fff; position: absolute; z-index: 2; backface-visibility: hidden; border: 0.5px solid #111; box-sizing: border-box; }
+        
+        .in_page:last-child { width: 100%; height: 100%; background-color: #fff; position: absolute; z-index: 1; /*background: #fccf57; */backface-visibility: hidden; }
+        
+        
+        /*   h4, h3   */
+        
+        h4 { width: 192.5px; height: 150px; margin: 30px 15px 20px 50px; float: left; background: #fff; border: 0.5px solid #111; box-sizing: border-box; }
+        
+        h4:nth-child(2) { margin-left: 0; margin-right: 0; }
+        
+        h4:nth-child(4) { margin: 20px 15px 30px 50px; }
+        
+        h4:nth-child(5) { margin: 20px 0 30px 0; }
+        
+        h3 { width: 400px; height: 200px; position: relative;  background: #383838; margin: auto; margin-top: 200px; font-size: 20px; text-align: center; line-height: 200px; overflow: auto; border: 1px solid #111; box-sizing: border-box; cursor: pointer; }
+        
+        
+        /*   나이키 이미지   */
+        
+        .page h3>img { width: 100%; height: auto; }
+        
+        
+        /*   책표지   */
+        
+        .page:first-child .in_page:first-child { background-image: url(img/cover.jpg); background-repeat: no-repeat; background-size: 100% 100%; }
+        
+        #text_wrap { width: 100%; height: auto; display: flex; margin-top: 120px;  justify-content: center; letter-spacing: -1px; }
+        
+        #text_wrap span:first-child { margin-right: 8px; font-size: 20px; font-weight: 600; }
+        
+        #text_wrap span:last-child { font-size: 16px; font-weight: 600; line-height: 26px; }
+        
+        .page:first-child .img_box { width: 100%; height: 100px; display: flex; justify-content: center; margin-top: 34px; }
+        
+        .page:first-child .in_page:first-child>span:last-child { display: flex; justify-content: center; font-size: 20px; font-weight: 500; margin-top: 260px; letter-spacing: -1px; }
+        
+        
+        /*   버튼   */
+        
+        .but { width: 65px; height: 35px; background: rgba(0,0,0,0.7); text-align: center; line-height: 35px; border-radius: 2px; position: fixed; z-index: 10; bottom: 10px; display: flex; justify-content: center; cursor: pointer; }
+        
+        #left { left: 5px; }
+        
+        #right { right: 5px; }
+        
+        .but span { color: #fff; font-size: 14px; font-weight: 600; }
+        
+        
+        /*   이미지 확대   */
+        
+        .box { width: 100%; height: 100%; background: #fff; position: fixed; top: 50%; left: 50%; z-index: 9; display: none; overflow: auto; }
+        
+        .box img { width: 100%; height: auto; }
+        
+        .box h1 { width: 50px; height: 50px; position: fixed; top: 50px; right: 50px; background: black; color: #fff; border-radius: 50px; text-align: center; line-height: 50px; font-size: 25px; font-weight: 400; cursor: pointer; display: none; }
+        
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.transit.min.js"></script>
+    <script src="js/jquery.zoomooz.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            var ww = $(window).width();
+            var wh = $(window).height();
+            
+            for(a=1; a<13; a++)  {
+                $('.photo').eq(a-1).css({
+                    backgroundImage:'url(img/img'+a+'.jpg)',
+                    backgroundRepeat:'no-repeat',
+                    backgroundSize:'100% auto'
+                });
+            }//나이키 pc버전에 부가적이 이미지
+            
+            var h3_size = $('h3').css('scale');
+            
+            var click_num = 0;
+            
+            
+            $('.box').css({
+                marginTop:-wh/2,
+                marginLeft:-ww/2
+            });
+            
+            
+            /*   나이키 pc버전   */
+            $('.page').eq(2).find('h3').click(function(){
+                
+                $('#box_1').show('1000');
+                $('.close').show('1000');
+                
+            });//h3 영역 클릭시 이미지 보임
+            
+            $('.close').click(function(){
+                
+                $('#box_1').hide('1000');
+                
+            });//닫기 클릭시 이미지 사라짐
+            
+            
+            
+            /*   나이키 mobile버전   */
+            $('.page').eq(3).find('h3').click(function(){
+                
+                $('#box_2').show('1000');
+                $('.close').show('1000');
+                
+            });//h3 영역 클릭시 이미지 보임
+            
+            $('.close').click(function(){
+                
+                $('#box_2').hide('1000');
+                
+            });//닫기 클릭시 이미지 사라짐
+            
+            
+            
+            
+            /*   맥날 pc버전   */
+            $('.page').eq(4).find('h3').click(function(){
+                
+                $('#box_3').show('1000');
+                $('.close').show('1000');
+                
+            });//h3 영역 클릭시 이미지 보임
+            
+            $('.close').click(function(){
+                
+                $('#box_3').hide('1000');
+                
+            });//닫기 클릭시 이미지 사라짐
+            
+            
+            
+            
+            $('#left').hide();
+            
+            $('#right').click(function(){
+                
+                if(click_num==0) {
+                    
+                    /*   나이키 pc버전 보임   */
+                    
+                    setTimeout(function(){
+                    
+                    $('.page').eq(0).transition({
+                        rotateY:'-180deg',
+                        zIndex:4
+                    },2000);
+                    
+                    setTimeout(function(){
+                        $('.in_page').eq(0).animate({
+                            opacity:0,
+                            zIndex:2
+                        },25);
+                    },450);
+                    
+                    setTimeout(function(){
+                        $('.in_page').eq(1).animate({
+                            opacity:1,
+                            zIndex:1
+                        },70);
+                    },500);
+                    
+                },500);//첫번째 페이지 이벤트
+                
+                setTimeout(function(){
+                    
+                    $('.page').eq(1).transition({
+                        rotateY:'-180deg',
+                        zIndex:5
+                    },2000);
+                    
+                    setTimeout(function(){
+                        $('.in_page').eq(2).animate({
+                            opacity:0,
+                            zIndex:2
+                        },25);
+                    },500);
+                    
+                    setTimeout(function(){
+                        $('.in_page').eq(3).animate({
+                            opacity:1,
+                            zIndex:1
+                        },250);
+                    },550);
+                    
+                },700);//두번째 페이지 이벤트
+                
+                setTimeout(function(){
+                    
+                     zoom_in();
+                    
+                     $('#left').show(500);
+                    
+                },1000);//책 확대 
+                    
+                    click_num++;
+                    
+                }else if(click_num==1) {
+                    
+                    /*   나이키 mobile버전 보임   */
+                    
+                    zoom_out();
+                    
+                    setTimeout(function(){
+                    
+                        $('#nike_pc').transition({
+                            rotateY:'-180deg',
+                            zIndex:6
+                        },2000);
+                    
+                        setTimeout(function(){
+                            $('.in_page').eq(4).animate({
+                                opacity:0,
+                                zIndex:2
+                            },25);
+                        },500)
+                     
+                        setTimeout(function(){
+                            $('.in_page').eq(5).animate({
+                                opacity:1,
+                                zIndex:1
+                            },250);
+                        },550)
+                        
+                        setTimeout(function(){
+                            zoom_in();
+                        },1000)
+                    
+                    
+                    },1200);//setimeout_end
+                    
+                    click_num++;
+                    
+                }else if(click_num==2) {
+                    
+                    /*   맥도날드 pc버전 보임   */
+                    
+                    zoom_out();
+                    
+                    setTimeout(function(){
+                    
+                        $('#nike_mobile').transition({
+                            rotateY:'-180deg',
+                            zIndex:7
+                        },2000);
+                    
+                        setTimeout(function(){
+                            $('.in_page').eq(6).animate({
+                                opacity:0,
+                                zIndex:2
+                            },25);
+                        },500)
+                    
+                        setTimeout(function(){
+                            $('.in_page').eq(7).animate({
+                                opacity:1,
+                                zIndex:1
+                            },250);
+                        },550)
+                        
+                        setTimeout(function(){
+                            zoom_in();
+                        },1000)
+                    
+                        $('#right').hide(500);
+                    
+                    },1200);//setimeout_end
+                    
+                    click_num++;
+                    
+                }else if(click_num>=3) {
+                    click_num=3;
+                }
+                
+            });//right_but_end
+            
+            
+            
+            
+            
+            $('#left').click(function(){
+                
+                if(click_num==1) {
+                    
+                    zoom_out();
+                    
+                    
+                    setTimeout(function(){
+                        
+                        $('.page').eq(0).transition({
+                            rotateY:0,
+                            zIndex:5
+                        },2000);
+                        
+                        setTimeout(function(){
+                             $('.in_page').eq(1).animate({
+                                opacity:0,
+                                zIndex:2
+                             },250);
+                        },600)
+                        
+                        
+                        setTimeout(function(){
+                             $('.in_page').eq(0).animate({
+                                opacity:1,
+                                zIndex:3
+                             },25);
+                        },500)
+                        
+                    },700);//첫번째 페이지
+                    
+                    
+                    setTimeout(function(){
+                        
+                        $('.page').eq(1).transition({
+                            rotateY:0,
+                            zIndex:4
+                        },2000);
+                        
+                        setTimeout(function(){
+                             $('.in_page').eq(3).animate({
+                                opacity:0,
+                                zIndex:2
+                             },250);
+                        },900)
+                        
+                        
+                        setTimeout(function(){
+                             $('.in_page').eq(2).animate({
+                                opacity:1
+                             },25);
+                        },500)
+                        
+                        $('#left').hide(500);
+                        
+                    },500);//두번째 페이지
+                    
+                    click_num--;
+                    
+                    
+                }else if(click_num==2) {
+                    
+                    /*   나이키 mobile버전에서 pc버전으로 전환   */
+                    
+                    zoom_out();
+                    
+                    setTimeout(function(){
+                    
+                        $('#nike_pc').transition({
+                            rotateY:0,
+                            zIndex:3
+                        },2000);
+                    
+                        setTimeout(function(){
+                            $('.in_page').eq(5).animate({
+                                opacity:0,
+                                zIndex:2
+                            },250);
+                        },1000)
+                    
+                        setTimeout(function(){
+                            $('.in_page').eq(4).animate({
+                                opacity:1,
+                                zIndex:3
+                            },25);
+                        },700)
+                        
+                        setTimeout(function(){
+                            zoom_in();
+                        },1200)
+                    
+                    
+                    },1200);//setimeout_end
+                    
+                    click_num--;
+                    
+                }else if(click_num==3) {
+                    
+                    /*   맥날에서 나이키 모바일버전으로 전환   */
+                    
+                    zoom_out();
+                    
+                    setTimeout(function(){
+                    
+                        $('#nike_mobile').transition({
+                            rotateY:0,
+                            zIndex:2
+                        },2000);
+                    
+                        setTimeout(function(){
+                            $('.in_page').eq(7).animate({
+                                opacity:0,
+                                zIndex:2
+                            },250);
+                        },1000)
+                    
+                        setTimeout(function(){
+                            $('.in_page').eq(6).animate({
+                                opacity:1,
+                                zIndex:3
+                            },25);
+                        },700)
+                        
+                        setTimeout(function(){
+                            
+                            zoom_in();
+                            
+                            $('#right').show(500);
+                            
+                        },1200)
+                    
+                    
+                    },1200);//setimeout_end
+                    
+                    click_num--;
+                    
+                }else if(click_num<=1) {
+                    click_num=1;
+                }
+                
+            });//left_but_end
+            
+            
+            
+            
+            
+                
+            function zoom_in() {
+                $('#wrap').animate({
+                    zoom:h3_size*4
+                },2000);
+            }
+            
+            function zoom_out() {
+                $('#wrap').animate({
+                    zoom:h3_size*4/4
+                },1500);
+            }
+            
+            
+            
+            
+        });//end
+    </script>
+</head>
+
+<body>
+    
+    <div class="but" id="left"><span>이전</span></div>
+    <div class="but" id="right"><span>다음</span></div>
+    
+    <div class="box" id="box_1">
+        <img src="img/img/nike_pc.jpg" alt="나이키 pc버전" />
+        <h1 class="close">X</h1>
+    </div>
+    
+    <div class="box" id="box_2">
+        <img src="img/img/nike_mobile.jpg" alt="나이키 모바일버전" />
+        <h1 class="close">X</h1>
+    </div>
+    
+    <div class="box" id="box_3">
+        <img src="img/img/mcdonald.jpg" alt="맥도날드" />
+        <h1 class="close">X</h1>
+    </div>
+    
+    <div id="wrap">
+        
+        
+        
+        <!--  표지  --> 
+        <section class="page">
+            <article class="in_page"></article>
+            <article class="in_page"></article>
+        </section>
+        
+        <!--  페이지  -->
+        <section class="page">
+            <article class="in_page"></article>
+            <article class="in_page"></article>
+        </section>
+        
+        <!--  페이지_나이키  -->
+        <section class="page" id="nike_pc">
+            <article class="in_page">
+                <h4 class="photo"></h4>
+                <h4 class="photo"></h4>
+                <h3>
+                    <img src="img/nike_pc.jpg" alt="나이키 pc버전" />
+                </h3>
+                <h4 class="photo"></h4>
+                <h4 class="photo"></h4>
+            </article>
+            <article class="in_page"></article>
+        </section>
+        
+        <!--  페이지  -->
+        <section class="page" id="nike_mobile">
+            <article class="in_page">
+                <h4 class="photo"></h4>
+                <h4 class="photo"></h4>
+                <h3>
+                    <img src="img/nike_mobile.jpg" alt="나이키 모바일버전" />
+                </h3>
+                <h4 class="photo"></h4>
+                <h4 class="photo"></h4>
+            </article>
+            <article class="in_page"></article>
+        </section>
+        
+        <!--  페이지  -->
+        <section class="page">
+            <article class="in_page">
+                <h4 class="photo"></h4>
+                <h4 class="photo"></h4>
+                <h3>
+                    <img src="img/mcdonald.jpg" alt="맥도날드" />
+                </h3>
+                <h4 class="photo"></h4>
+                <h4 class="photo"></h4>
+            </article>
+            <article class="in_page"></article>
+        </section>
+        
+    </div>
+    
+    
+    <div id="bg"></div>
+</body>
+</html>

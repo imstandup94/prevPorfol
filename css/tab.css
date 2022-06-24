@@ -1,0 +1,496 @@
+@media all and (min-width:560px) and (max-width:899px) {
+    
+    /* 공통부분 */ 
+    html,boyd { overflow-x: hidden; }
+    
+    #wrap { display: none; }
+    
+    section { background: linear-gradient(#f5e0e8 70%,#c4b0d9); position: relative; float: left; }
+    
+    .title { width: 100%; color: #2f143d; font-size: 45px; font-family: "BerlinSansFBDemi-Bold"; text-align: center; text-transform: uppercase; margin-top: 12.5vw; letter-spacing: -1px; }
+        
+    .title_text { width: 90%; margin: 0 auto; font-size: 16px; text-align: center; margin-top: 2vw; letter-spacing: -1.5px; line-height: 26px; }
+        
+    .con_wrap { width: 100%; height: auto; position: relative; margin-top: 11vw; }
+    
+    
+    
+
+    
+    /* m_header */
+    #m_wrap header { height: auto; float: left; position: fixed; z-index: 999999; padding: 30px 20px; box-sizing: border-box; }
+    
+    /* 로고 */
+    #m_wrap header #m_logo { width: 56px; height: 46px; float: left; background-image: url(../svg/header/logo.svg); background-repeat: no-repeat; background-position: center; background-size: contain; cursor: pointer; }
+    
+    /* 메뉴 아이콘 */
+    #m_wrap>header .m_menu_icon { width: 47px; height: 43px; float: right; }
+    
+    #m_wrap>header .m_menu { width: 100%; height: 100%; float: left; background-image: url(../svg/header/menu.svg); background-repeat: no-repeat; background-position: center; background-size: contain; cursor: pointer; }
+    
+    
+    
+    /* 모바일 메뉴 */
+    #m_menu_wrap { position: fixed; z-index: 999999; }
+    
+    #m_menu_wrap .m_menu_icon { width: 47px; height: 43px; float: right; }
+    
+    #m_menu_wrap .m_close { width: 100%; height: 100%; float: left; background-image: url(../svg/header/close.svg); background-repeat: no-repeat; background-position: center; background-size: contain; cursor: pointer; }
+    
+    
+    /* 모바일 메뉴 */
+    #m_menu_wrap #m_menu { width: 100%; height: auto;
+    position: absolute; top: 50%; transform: translate(0,-50%); }
+    
+    #m_menu_wrap #m_menu li { margin: 0; margin-bottom: 40px; cursor: pointer; }
+    
+    #m_menu_wrap .copy { width: 100%; position: absolute; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: -0.6px; bottom: 2vw; text-transform: uppercase; }
+    
+    
+    
+    
+    
+    /* 모바일 메인 */
+    #m_wrap #m_main_bg { position: relative; }
+    
+    #m_wrap #m_main { width: 100%; position: absolute; top: 0; left: 50%; top: 50%; transform: translate(-50%,-50%); background: transparent; }
+    
+    #m_main div { background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; }
+    
+    
+    /* 구름 */
+    #m_main .cloud_1 { width: 55%; height: 34vw; background-image: url(../img/main/cloud_1.png); top: 6.73vw; left: -2%; }
+    
+    #m_main .cloud_2 { width: 32%; height: 19vw; background-image: url(../img/main/cloud_2.png); top: 7vw; left: 75%; }
+    
+    
+    #m_main .cloud_3 { width: 28%; height: 20vw; background-image: url(../img/main/cloud_3.png); top: 18vw; left: 57%; }
+    
+    /* 해 */
+    #m_main .sun { width: 15%; height: 14vw; background-image: url(../img/main/sun.png); top: 4.8vw; left: 20%;  }
+    
+    #m_main .sun_bg { width: 25%; height: 24vw; background-image: url(../img/main/sun_bg.png); top: 0; left: 15%; }
+    
+    
+    
+    /* 새 */
+    #m_main .bird_1 { width: 15%; height: 14vw; background-image: url(../img/main/); top: 4.8vw; left: 20%; }
+    
+    
+    
+    /* 산 */
+    #m_main .mountain_1 { width: 40%; height: 24vw; background-image: url(../img/main/mountain_1.png); left: 45%; top: 49vw; }
+    
+    #m_main .mountain_2 { width: 42%; height: 26vw; background-image: url(../img/main/mountain_2.png); left: 8%; top: 50vw; }
+    
+    #m_main .mountain_3 { width: 42%; height: 26vw; background-image: url(../img/main/mountain_3.png); left: 57%; top: 52vw; }
+    
+    #m_main .mountain_4 { width: 50%; height: 26vw; background-image: url(../img/main/mountain_4.png); left: -7%; top: 53vw; }
+    
+    #m_main .mountain_5 { width: 38%; height: 28vw; background-image: url(../img/main/mountain_5.png); left: 75%; top: 55vw; }
+    
+    
+    
+   /* 작업물 */
+    #m_main .work_bg { width: 65%; height: 54vw; background-image: url(../img/main/work_bg.png); top: 28vw; left: 14%; }  
+    
+    #m_main .work { width: 62.5%; height: 50vw; background-image: url(../img/main/work.png); top: 30vw; left: 15.17%; }  
+    
+    
+    
+    /* 나무 */
+    #m_main .tree_1 { width: 28%; height: 21vw; background-image: url(../img/main/tree_1.png); top: 62vw; left: 13%; } 
+    
+    #m_main .tree_2 { width: 20%; height: 17vw; background-image: url(../img/main/tree_2.png); top: 67vw; left: 86.5%; }  
+    
+    #m_main .tree_3 { width: 46%; height: 20vw; background-image: url(../img/main/tree_3.png); top: 64vw; left: 1.2%;}  
+    
+    
+    /* 풀 */
+    #m_main .big_grass_1 { width: 41%; height: 13vw; background-image: url(../img/main/big_grass_1.png); top: 72vw; left: 1%; }
+    
+    #m_main .big_grass_2 { width: 41%; height: 13vw; background-image: url(../img/main/big_grass_2.png); top: 74vw; left: 76%; }
+    
+    #m_main .big_grass_3 { width: 30%; height: 10vw; background-image: url(../img/main/big_grass_3.png); top: 75.5vw; left: 33%; }
+    
+    #m_main .big_grass_4 { width: 34%; height: 13vw; background-image: url(../img/main/big_grass_4.png); top: 71.8vw; left: -11%; }
+    
+    
+    /* 개인 포폴 */
+    #m_main .portfolio_bg { width: 37%; height: 24vw; background-image: url(../img/main/portfolio_bg.png); top: 64vw; left: 53%; }
+    
+    #m_main .portfolio_1 { width: 34%; height: 23vw; background-image: url(../img/main/portfolio_1.png); top: 64.5vw; left: 54.6%; }
+    
+    #m_main .portfolio_2 { width: 14%; height: 16vw; background-image: url(../img/main/portfolio_2.png); top: 71.4vw; left: 39%; }
+    
+    
+    
+    /* 땅 */
+    #m_main .ground { width: 135%; height: 18vw; background-image: url(../img/main/ground.png); top: 84vw; left: -14%; }
+    
+    
+    /* 풀 */
+    #m_main .small_grass_1 { width: 39%; height: 10vw; background-image: url(../img/main/small_grass_1.png); top: 87.4vw; left: 2.6%;}
+    
+    #m_main .small_grass_2 { width: 30%; height: 9vw; background-image: url(../img/main/small_grass_2.png); top: 88.2vw; left: 49%;}
+    
+    #m_main .small_grass_3 { width: 116%; height: 12vw; background-image: url(../img/main/small_grass_3.png); top: 83.8vw; left: 44%; }
+    
+    #m_main .small_grass_4 { width: 90%; height: 7vw; background-image: url(../img/main/small_grass_4.png); top: 87vw; left: -1%; }
+    
+    #m_main .small_grass_5 { width: 118%; height: 4vw; background-image: url(../img/main/small_grass_5.png); top: 85vw; left: -19%; }
+    
+    
+    /* 물 */
+    #m_main .water { width: 30%; height: 9vw; background-image: url(../img/main/water.png); top: 90vw; left: 19%; }
+    
+    
+    /* 연락처 */
+    #m_main .contact_bg { width: 9%; height: 7vw; background-image: url(../img/main/contact_bg.png); top: 85vw; left: 11%; }
+    
+    #m_main .contact { width: 10%; height: 7vw; background-image: url(../img/main/contact.png); top: 86.5vw; left: 9.8%; }
+    
+    
+    /* 프로필 */
+    #m_main .profile_bg { width: 8%; height: 11vw; background-image: url(../img/main/profile_bg.png) ; top: 81vw; left: 74%; }
+    
+    #m_main .profile { width: 10%; height: 12vw; background-image: url(../img/main/profile.png); top: 81.65vw; left: 73.5%; }
+    #m_main .profile { width: 10%; height: 12vw; background-image: url(../img/main/profile.png); top: 81.65vw; left: 73.5%; }
+    
+    
+    /* 카피 */
+    #m_main .copy { width: 100%; position: absolute; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: -0.6px; top: 105.5vw; text-transform: uppercase; }
+    
+    
+    
+    
+    /* 모바일 프로필 */
+    #m_profile #m_profile_mask { position: absolute; cursor: pointer; }
+    
+    #m_profile #m_profile_wrap { width: 300%; height: 100%; position: absolute; cursor: pointer; }
+    
+    #m_profile article { width: 33.333%; height: 100%; float: left; }
+    
+    
+    
+    /* 모바일 프로필 1번째 영역 */
+    #m_profile article:nth-child(1) .me { width: 425px; height: 343px; background-image: url(../svg/profile/me.svg); background-repeat: no-repeat; background-size: contain; background-position: center; margin: 36vw auto 3.2vw auto; }
+    
+    #m_profile article:nth-child(1) h4 { width: 100%; height: auto; font-size: 25px; letter-spacing: -1px; text-align: center; margin-bottom: 0.5vw; font-weight: 800; }
+    
+    #m_profile article:nth-child(1) small { font-size: 16px; }
+    
+    
+    #m_profile article:nth-child(1) h5 { width: 100%; height: auto; font-size: 18px; letter-spacing: -0.8px; text-align: center; font-weight: 600; }
+    
+    
+    
+    /* 모바일 프로필 2번째 영역 */
+    #m_profile article .wrap { width: auto; height: auto; position: absolute; left: 50%; transform: translateX(-50%); }
+    
+    #m_profile article .con { width: 325px; height: auto; margin: 0 auto; float: left; }
+    
+    #m_profile article .con:nth-child(1) { margin-top: 40vw; }
+    
+    #m_profile article:nth-child(2) .con:nth-child(2) { margin: 6vw 0; }
+    
+    #m_profile article h4 { width: 100%; height: auto; font-size: 16px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 7px; }
+    
+    #m_profile article .line { width: 100%; height: 2px; background: #362639; margin-bottom: 20px; }
+    
+    #m_profile article h5 { width: 100%; height: auto; font-size: 14px; font-weight: 600; letter-spacing: -0.8px; margin: 0 6px; text-align: justify; line-height: 24px; }
+    
+    
+    /* 아이콘 영역 */
+    #m_profile article:nth-child(2) .icon_wrap { width: 100%; height: auto; padding: 0 8px; box-sizing: border-box; }
+    
+    #m_profile article:nth-child(2) .icon_box { width: auto; height: auto; float: left; }
+    
+    #m_profile article:nth-child(2) .icon_box:nth-child(2) { margin: 0 64px 0 69px; }
+    
+    #m_profile article:nth-child(2) .icon { width: 75px; height: 65px; background-image: url(../svg/profile/icon_2.svg); background-repeat: no-repeat; background-size: contain; background-position: center; }
+    
+    
+    /* 아이콘 이미지 변경 */
+    #m_profile article:nth-child(2) .icon_box:nth-child(1) .icon { width: 50px; height: 65px; float: left; background-image: url(../svg/profile/icon_1.svg); }
+    
+    #m_profile article:nth-child(2) .icon_box:nth-child(3) .icon { width: 51px; height: 65px; float: left; background-image: url(../svg/profile/icon_3.svg); }
+    
+    
+    /* 아이콘 텍스트 */
+    #m_profile article:nth-child(2) .icon_wrap h6 { width: 100%; height: auto; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: -0.8px; }
+    
+    
+    
+    
+    
+    /* 세번째 영역 */
+    #m_profile article:nth-child(3) .con:nth-child(1) { margin-bottom: 6vw; }
+    
+    #m_profile .skill_wrap { width: 100%; height: auto; float: left; }
+    
+    #m_profile .skill_box { width: 100%; height: auto; float: left; position: relative; margin-bottom: 14px; }
+    
+    
+    /* mobile에서만 보이는 영역 숨김 */
+    #m_profile article:nth-child(4) { display: none; }
+    
+    
+    /* 레드막대 */
+    #m_profile .red_line { width: 147px; height: 6px; position: absolute; top: 20.5px; background: #d64141; border-radius: 6px; left: 30px; }
+    
+    /* 온도계 */
+    #m_profile .skill { width: 226px; height: 45px; float: left; background-image: url(../svg/profile/ps.svg); background-repeat: no-repeat; background-position: center; background-size: contain; position: relative; }
+    
+    #m_profile article:nth-child(3) .skill_box h6 { float: left; font-size: 14px; font-weight: 600; line-height: 47px; position: relative; }
+    
+    
+    /* 온도계 이미지 변경 */
+    /* 일러 */
+    #m_profile .skill_box:nth-child(2) .red_line { width: 139px; height: 6px; position: absolute; top: 20.5px; background: #d64141; border-radius: 6px; left: 30px; }
+    
+    #m_profile .skill_box:nth-child(2) .skill { width: 226px; height: 45px; float: left; background-image: url(../svg/profile/ai.svg); background-repeat: no-repeat; background-position: center; background-size: contain; position: relative; }
+    
+    
+    /* html */
+    #m_profile .skill_box:nth-child(3) .red_line { width: 173px; height: 6px; position: absolute; top: 20.5px; background: #d64141; border-radius: 6px; left: 30px; }
+    
+    #m_profile .skill_box:nth-child(3) .skill { width: 226px; height: 45px; float: left; background-image: url(../svg/profile/html.svg); background-repeat: no-repeat; background-position: center; background-size: contain; position: relative; }
+    
+    
+    /* css */
+    #m_profile .skill_box:nth-child(4) .red_line { width: 181px; height: 6px; position: absolute; top: 20.5px; background: #d64141; border-radius: 6px; left: 30px; }
+    
+    #m_profile .skill_box:nth-child(4) .skill { width: 226px; height: 45px; float: left; background-image: url(../svg/profile/css.svg); background-repeat: no-repeat; background-position: center; background-size: contain; position: relative; }
+    
+    
+    /* js */
+    #m_profile .skill_box:nth-child(5) .red_line { width: 164px; height: 6px; position: absolute; top: 20.5px; background: #d64141; border-radius: 6px; left: 30px; }
+    
+    #m_profile .skill_box:nth-child(5) .skill { width: 226px; height: 45px; float: left; background-image: url(../svg/profile/js.svg); background-repeat: no-repeat; background-position: center; background-size: contain; position: relative; }
+    
+    
+    
+    /* 모바일 프로필 버튼 */
+    #m_profile .but_wrap { width: 67px; height: 8px; position: absolute; left: 50%; transform: translateX(-50%); display: flex; justify-content: space-between; /* top: 126vw;*/ bottom: 5vw; }
+    
+    #m_profile .but { width: 8px; height: 8px; float: left; border-radius: 8px;  background: #2f143d; }
+    
+    
+    
+    
+    
+    
+    /* 모바일 포트폴리오 */
+    #m_portfolio .con_wrap { width: 560px; margin: 0 auto; margin-top: 11vw; }
+    
+    #m_portfolio .con_wrap .con_box { width: 110px; height: 170px;; position: absolute; left: 35px; }
+    
+    #m_portfolio .con_wrap .m_smile { width: 110px; height: 110px; position: absolute; z-index: 2; }
+    
+    #m_portfolio .con_wrap .m_smile a { display: block; width: 110px; height: 110px; background-image: url(../img/portfolio/smile_1.png); background-repeat: no-repeat; background-position: center; background-size: contain; }
+    
+    #m_portfolio .con_wrap .con_box .shadow { width: 100%; height: 40px; background-image: url(../img/portfolio/shadow_1.png); z-index: 1; top: 160px; background-size: 85% auto; background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; z-index: 1; }
+    
+    
+    
+    
+    /* 포트폴리오 이미지 변경 및 위치값 변경 */
+    /* 포폴 두번째 */
+    #m_portfolio .con_wrap .con_box:nth-child(2) { left: 401px; }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(2) .m_smile a { background-image: url(../img/portfolio/smile_2.png); }
+    
+    
+    /* 포폴 세번째 */
+    #m_portfolio .con_wrap .con_box:nth-child(3) { width: 180px; height: 170px; top: 154px; left: 50%; transform: translateX(-50%); }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(3) .m_smile { width: 180px; height: 116px; }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(3) .m_smile a { width: 180px; height: 116px; background-image: url(../img/portfolio/smile_3.png); }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(3) .shadow { background-image: url(../img/portfolio/shadow_2.png); background-size: 90% auto; }
+    
+    
+    
+    /* 포폴 네번째 */
+    #m_portfolio .con_wrap .con_box:nth-child(4) { width: 161px; height: 160px; top: 336px; left: 15px; }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(4) .m_smile { width: 161px; height: 90px; }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(4) .m_smile a { width: 161px; height: 90px; background-image: url(../img/portfolio/smile_4.png); }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(4) .shadow {  background-image: url(../img/portfolio/shadow_3.png); top: 125px; background-size: 70% auto; }
+    
+    
+    /* 포폴 다번째 */
+    #m_portfolio .con_wrap .con_box:nth-child(5) { width: 104px; height: 157px; top: 336px; left: 408px; }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(5) .m_smile { width: 104px; height: 90px; }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(5) .m_smile a { display: block; width: 104px; height: 90px; background-image: url(../img/portfolio/smile_5.png); }
+    
+    #m_portfolio .con_wrap .con_box:nth-child(5) .shadow {  background-image: url(../img/portfolio/shadow_4.png); top: 125px; background-size: 90% auto; }
+    
+    
+    
+    
+    /* 화살표 */
+    #m_portfolio .m_arrow { width: 180px; height: 17px; position: absolute; left: 184px; top: 50px; background-image: url(../img/portfolio/arrow_1.png); background-repeat: no-repeat; background-position: center; background-size: contain; }
+    
+    #m_portfolio .m_arrow:nth-child(7) { width: 56px; height: 40px; position: absolute; left: 354px; top: 113px; background-image: url(../svg/portfolio/m_arrow_2.svg); }
+    
+    #m_portfolio .m_arrow:nth-child(8) { width: 58px; height: 42px; position: absolute; left: 138px; top: 278px; background-image: url(../svg/portfolio/m_arrow_2.svg); }
+    
+    #m_portfolio .m_arrow:nth-child(9) { width: 161px; height: 17px; position: absolute; left: 210px; top: 378px; background-image: url(../img/portfolio/arrow_4.png); }
+    
+    
+    
+    
+    
+    /* 작업물 */
+    #m_work .con_wrap { width: 560px; margin: 0 auto; margin-top: 11vw; }
+    
+    #m_work .con_box { width: 140px; height: 180px; position: absolute; left: 40px; }
+    
+    #m_work .con { width: 100%; height: 114px; position: absolute; background-repeat: no-repeat; background-position: center; background-size: contain; cursor: pointer; }
+    
+    #m_work .shadow { width: 100%; height: 30px; position: absolute; top: 150px; background-image: url(../img/work/work_1_1.png); background-repeat: no-repeat; background-position: center; background-size: contain; }
+    
+    /* 두번째, 세번째 작업물 */
+    #m_work .con_box:nth-child(2) .con,#m_work .con_box:nth-child(3) .con {width: 100%; height: 114px; position: absolute; }
+    
+    #m_work .con a { display: block; width: 140px; height: 114px; background-image: url(../img/work/work_2.png); background-repeat: no-repeat; background-position: center; background-size: contain; }
+    
+    
+    /* 작업물 이미지 변경 및 위치 변경 */
+    /* 첫번째 돌멩이 */
+    #m_work .con_box:nth-child(1) .con { background-image: url(../img/work/work_1.png); }
+    
+    /* 두번째 돌멩이 */
+    #m_work .con_box:nth-child(1) .con { background-image: url(../img/work/work_1.png); }
+    
+    #m_work .con_box:nth-child(2) { left: 380px; }
+    
+    #m_work .con_box:nth-child(2) .con { background-image: url(../img/work/work_2.png); }
+    
+    #m_work .con_box:nth-child(2) .shadow { background-image: url(../img/work/work_2_1.png); }
+    
+    
+    
+    /* 세번째 돌멩이 */
+    #m_work .con_box:nth-child(3) { width: 150px; height: 208px; left: 50%; transform: translateX(-50%); top: 140px; }
+    
+    #m_work .con_box:nth-child(3) .con { height: 144px; }
+    
+    #m_work .con_box:nth-child(3) .con a { width: 150px; height: 144px; background-image: url(../img/work/work_3.png); }
+    
+    #m_work .con_box:nth-child(3) .shadow { background-image: url(../img/work/work_3_1.png); background-size: 90% auto; top: 178px;}
+    
+    
+    /* 네번째 돌멩이 */
+    #m_work .con_box:nth-child(4) { top: 306px; }
+    
+    #m_work .con_box:nth-child(4) .con { height: 122px; background-image: url(../img/work/work_4.png); }
+    
+    #m_work .con_box:nth-child(4) .shadow { background-image: url(../img/work/work_4_1.png); }
+    
+    
+    /* 다섯번째 돌멩이 */
+    #m_work .con_box:nth-child(5) { top: 306px; left: 379px; }
+    
+    #m_work .con_box:nth-child(5) .con { height: 126px; background-image: url(../img/work/work_5.png); }
+    
+    #m_work .con_box:nth-child(5) .shadow { background-image: url(../img/work/work_4_1.png); }
+    
+    
+    
+    /* 모바일 작업창 결과물 */
+    #m_work_wrap { width: 100%; height: 100%; background: rgba(0,0,0,0.6); position: fixed; z-index: 9999; }
+    
+    #m_work_wrap .bg { width: 500px; height: 330px; border-radius: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); overflow: hidden; }
+    
+    #m_work_wrap .bg .work_close { width: 30px; height: 30px; border-radius: 20px; position: absolute; right: 25px; top: 25px; z-index: 2; background: #b267b2; background-image: url(../img/portfolio/port_close.png); background-position: center; background-repeat: no-repeat; background-size: 50% auto; cursor: pointer; }
+    
+    #m_work_wrap .bg .con_box { width: 100%; height: 100%; position: absolute; z-index: 1; }
+    
+    #m_work_wrap .bg:nth-child(1) .con_box { overflow-y: scroll; }
+    
+    #m_work_wrap .bg .con_box img { width: 100%; height: auto; }
+    
+    
+    
+    /* 맥날, 맥심커피 */
+    #m_work_wrap .work_con_1 .mobile_img_wrap { display: none; }
+    
+    #m_work_wrap .work_con_1 .work_con_1_mask { width: 100%; height: 100%; position: relative; background: #fff; }
+    
+    #m_work_wrap .work_con_1 .work_con_1_mask .img_wrap { width: 200%; height: 100%; position: absolute; }
+    
+    #m_work_wrap .work_con_1 .work_con_1_mask .img_wrap .con_box { width: 50%; height: 100%; float: left; position: relative; }
+    
+    #m_work_wrap .work_con_1 .work_con_1_mask .img_wrap .con_box img { width: 100%; height: auto; }
+    
+    
+    
+    /* jh */
+    #m_work_wrap .bg:nth-child(2) .con_box { background-image: url(../svg/work/jh.svg); background-repeat: no-repeat; background-position: center; background-size: contain; overflow: hidden; }
+    
+    /* 그림 */
+    #m_work_wrap .bg:nth-child(3) .con_mask { width: 500px; height: 100%; overflow: hidden; position: relative; z-index: 1; }
+    
+    #m_work_wrap .bg:nth-child(3) .con_box { width: 1000px; height: 100%; position: absolute; }
+    
+    #m_work_wrap .bg:nth-child(3) .con_box h3 { width: 500px; height: 100%; background-image: url(../img/work/new.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; float: left; }
+    
+    #m_work_wrap .bg:nth-child(3) .con_box h3:nth-child(2) { background-image: url(../img/work/loding.jpg); }
+    
+    #m_work_wrap .work_arrow { width: 75px; height: 30px; position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%); z-index: 999; }
+    
+    #m_work_wrap .work_arrow .it { width: 30px; height: 100%; background: #b267b2; background-image: url(../img/work/work_arrow.png); background-position: center; background-repeat: no-repeat; background-size: 30% auto; border-radius: 30px; float: left; cursor: pointer; opacity: 0.5; }
+    
+    #m_work_wrap .work_arrow .it:nth-child(2) { float: right; transform: rotate(-180deg); opacity: 1; }
+    
+    
+    
+    /* 연락처 */
+    #m_contact .con_wrap { margin-top: 1vw; }
+    
+    #m_contact .bg { width: 105%; height: 488px; background-image: url(../svg/contact/m_bg.svg); background-repeat: no-repeat; background-size: contain; background-position: center; position: absolute; left: 10px; z-index: 1; }
+    
+    
+    /* 연락처 텍스트 */
+    #m_contact .text_wrap { width: 543px; height: auto; position: absolute; z-index: 2; left: 50%; transform: translateX(-50%); margin-top: 130px; }
+    
+    #m_contact .text_wrap h3 { width: 64%; height: auto; text-align: justify; font-size: 14px; font-weight: 600; line-height: 26px; margin-left: 18%; }
+    
+    
+    /* sns */
+    #m_contact .text_wrap .icon_wrap { width: auto; height: auto; margin-top: 30px; margin-left: 126px;  }
+    
+    #m_contact .text_wrap .icon_box { width: 150px; height: auto; float: left; }
+    
+    #m_contact .text_wrap .icon_box:nth-child(2) { margin: 0 30px; }
+    
+    #m_contact .text_wrap .icon { width: 100%; height: 35px; background-image: url(../img/contact/icon_2.png); background-repeat: no-repeat; background-size: 30% auto; background-position: center; margin-bottom: 8px; }
+    
+    
+    
+    
+    /* sns 이미지 변경 */
+    /* 첫번째 (카톡) */
+    #m_contact .text_wrap .icon_box:nth-child(1) { width: 37px; height: auto; float: left; }
+    
+    #m_contact .text_wrap .icon_box:nth-child(1) .icon { width: 100%; background-image: url(../img/contact/icon_1.png); background-size: contain; }
+    
+    
+    /* 세번째 (인스타) */
+    #m_contact .text_wrap .icon_box:nth-child(3) { width: 37px; height: auto; float: left; }
+    
+    #m_contact .text_wrap .icon_box:nth-child(3) .icon { width: 100%; background-image: url(../img/contact/icon_3.png); background-size: contain; }
+    
+    
+    #m_contact .text_wrap h5 { width: 100%; font-size: 13px; text-align: center; }
+    
+    
+}

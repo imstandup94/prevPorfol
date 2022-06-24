@@ -1,0 +1,341 @@
+@media all and (min-width:900px) and (max-width:1394px) {
+    
+/* 공통 부분 시작 */
+#wrap { float: left; }
+    
+#wrap .width_align { width: 900px; height: auto; margin: auto; }
+
+/* text_wrap : big_title, small_title 감싸는 부모 */
+#wrap .title_wrap { width: 100%; height: auto; margin-bottom: 15px; }
+
+/* big_title : 큰 타이틀 텍스트 (강조할 글자) | 텍스트 크기에 관련된 속성만 있음 */
+#wrap .big_title { font-size: 50px; font-weight: 800; letter-spacing: -4px; }
+
+
+/* small_title : 그냥 타이틀 텍스트 (강조할 글자에 비해 작은 글자) | 텍스트 크기에 관련된 속성만 있음*/
+#wrap .small_title { font-size: 30px; font-weight: 800; letter-spacing: -2px; }
+
+
+/* p태그 (설명 문단) */
+#wrap .text_con { font-size: 15px; font-weight: 500; text-align: justify; line-height: 25px; letter-spacing: -0.5px; }
+
+/* 더 보러가기 버튼 */
+#wrap .text_box .but { width: 156px; height: 55px; border: 2px solid #d35959; box-sizing: border-box; border-radius: 28px; margin-top: 70px; display: none; }
+
+#wrap .text_box .but>a { display: block; width: 100%; height: 100%; text-align: center; line-height: 51px; font-size: 18px; font-weight: 500; letter-spacing: -0.5px; }
+
+    
+/* 숨길 영역 */
+#m_wrap { display: none; } { display: none; }
+    
+    
+/* header 시작 */
+header { float: left; border-bottom: 2px solid #dc4848; position: fixed; z-index: 99; background: #fff; }
+    
+header .width_align { height: 100%; padding: 0 15px; display: flex; justify-content: center; }
+    
+    
+/* 로고 */
+header #logo { width: 90px; height: 25px; float: left; /*margin: 30px 86px 0 0;*/ margin-top: 30px; cursor: pointer; }
+    
+header #logo img { width: 100%; height: auto; }
+    
+    
+/* 메뉴 */
+header #menu_wrap { width: 420px; height: 25px; float: left; margin: 28px 0 0 0; }
+    
+header #menu_wrap li { width: 20%; height: 100%; float: left; text-align: center; line-height: 25px; font-size: 16px; font-weight: 600; letter-spacing: -0.5px; }
+    
+    
+/* side_menu */
+header #side_menu { width: 218px; height: 37px; float: left; /*margin: 21.5px 0 0 86px;*/ margin-top: 21.5px; }
+
+
+header #side_menu #search { width: 129px; height: 35px; float: left; border-bottom: 2px solid #555; background: #fff; border-radius: 1px; }
+
+header #side_menu #search input { width: 86px; padding: 10px; border: 0; outline: none; float: left; color: #cdcdcd; }
+
+input:-ms-input-placeholder { color: #cdcdcd; }
+input::-webkit-input-placeholder { color: #cdcdcd; }
+input::-moz-input-placeholder { color: #cdcdcd; }
+
+header #side_menu #search .icon { width: 21px; height: 21px; float: right; background-image: url(../img/section/search.png); background-repeat: no-repeat; background-size: 100% auto; cursor: pointer; margin-top: 7px; }
+    
+
+header #side_menu h5:nth-child(2) { width: 29px; height: 30px; float: left; margin: 0 10px 0 21px; background-image: url(../img/section/mark_1.png); background-size: 100% auto; background-repeat: no-repeat; cursor: pointer; margin-top: 3.5px; }
+
+header #side_menu h5:nth-child(3) { width: 29px; height: 30px; float: left; background-image: url(../img/section/mark_2.png); background-size: 100% auto; background-repeat: no-repeat; cursor: pointer; margin-top: 3.5px; }
+
+    
+/* section_wrap 시작 */
+#section_wrap { float: left; }
+    
+section { float: left; position: relative; }
+    
+    
+/* section_1 시작 */
+    
+#section_1 { background: gray; position: relative; }
+    
+#section_1 .con_wrap { width: 100%; height: 100%; position: absolute; }
+
+    
+    
+/* 메인 첫번째 시작 */
+#section_1 .con_wrap:first-child { background-image: url(../img/section/section_1_1.jpg); background-repeat: no-repeat; background-size: 100% auto; }
+    
+#section_1 .con_wrap:first-child>.text_box { width: 374px; height: auto; position: absolute; left: 50%; top: 40.8%; opacity: 0; transform: translateY(-50px); }
+    
+#section_1 .con_wrap:first-child>.text_box .title_wrap { width: 100%; height: auto; margin-bottom: 0; }
+    
+#section_1 .con_wrap:first-child>.text_box .title_wrap span:first-child { font-size: 60px; font-weight: 800; color: #da0112; letter-spacing: -4px; }
+    
+#section_1 .con_wrap:first-child>.text_box .title_wrap>span:last-child { font-size: 40px; font-weight: 800; color: #da0112; letter-spacing: -3px; }
+    
+#section_1 .con_wrap:first-child>.text_box>span { display: block; width: 100%; margin-top: 3.9%; font-size: 40px; font-weight: 800; color: #111; letter-spacing: -3px; text-align: center; }
+    
+    
+    
+/* 메인 두번째 시작 */
+#section_1 .con_wrap:nth-child(2) { background-image: url(../img/section/section_1_2.jpg); background-repeat: no-repeat; background-size: 100% auto; opacity: 0; }
+    
+#section_1 .con_wrap:nth-child(2)>.text_box { width: 394px; height: auto; position: absolute; left: 50%; top: 33.1%; opacity: 0; transform: translateY(-50px); }
+    
+#section_1 .con_wrap:nth-child(2)>.text_box .title_wrap { width: 200px; height: auto; margin: 0 auto; }
+    
+#section_1 .con_wrap:nth-child(2)>.text_box .title_wrap>span:nth-child(1) { font-size: 100px; font-weight: 800; color: #da0112; letter-spacing: -5px; }
+    
+#section_1 .con_wrap:nth-child(2)>.text_box .title_wrap>span:nth-child(2) { font-size: 40px; font-weight: 800; color: #da0112; letter-spacing: -3px; }
+    
+#section_1 .con_wrap:nth-child(2)>.text_box>span { width: 100%; font-size: 40px; font-weight: 800; text-align: center; color: #111; letter-spacing: -3px; /*margin-top: 20px;*/ margin-top: 2%; display: block; }
+    
+    
+/* 메인 스크롤 표시 시작 */
+@keyframes arrow_ani {
+    
+    0% { transform: translateY(0); }
+    100 { transform: translateY(10px); }
+    
+}
+
+#section_1 #arrow { width: 22px; height: 12px; position: absolute; bottom: 10.7%; /*bottom: 105px;*/ left: 50%; margin-left: -11px; animation-name: ani; animation-duration: 1.5s; animation-timing-function: linear; animation-iteration-count: infinite; }
+    
+#section_1 #arrow img { width: 100%; height: auto; }
+    
+    
+@keyframes ani {
+    
+    0% { transform: translate(0,0); }
+    100% { transform: translate(0,20px); }
+    
+}
+    
+    
+    
+/* section_2 (후라이팬) 시작 */
+#section_2 { background-image: url(../img/section/section_2_2_bg.jpg); background-repeat: no-repeat; background-size: cover; }
+
+
+
+/* 제품 이미지 시작 */
+#section_2 .egg { width: 26.40%; height: 62.02%; background-image: url(../img/section/egg.png); background-repeat: no-repeat; background-size: 100% auto; position: absolute; top: 15.95%; left: 47.60%; }
+
+
+
+/* 텍스트 시작 */
+#section_2 .text_box { width: 291px; height: auto; position: absolute; top: 35%; left: 13.53%; /*left: 15%;*/ }
+    
+#section_2 .text_box .title_wrap { transform: translateY(-50px); opacity: 0; }
+
+#section_2 .text_box .title_wrap span:first-child { color: #fff; }
+
+#section_2 .text_box .title_wrap span:last-child { color: #c00c0c; }
+
+#section_2 .text_box p { color: #fff; }
+
+#section_2 .text_box .but { border: 2px solid #fff; /*display: none;*/ }
+
+#section_2 .text_box .but a { color: #fff; }
+
+
+
+    
+/* section_3 시작 */
+#section_3 { background-image: url(../img/section/section_3_bg.jpg); background-repeat: no-repeat; background-size: cover; }
+
+
+/* 빨간점 시작 */
+#section_3 .img_box { width: 33.12%; height: 63.70%; position: absolute; top: 19.5%; left: 14.68%; background-image: url(../img/section/red_dot.gif); background-repeat: no-repeat; background-size: contain; }
+
+
+/* 텍스트 시작 */
+#section_3 .text_box { width: 280px; height: auto; position: absolute; top: 40.60%; left: 61.56%; }
+
+#section_3 .text_box .title_wrap span:first-child { color: #db0516; }
+
+#section_3 .text_box .title_wrap span:last-child { color: #fff; }
+
+#section_3 .text_box p { color: #fff; }
+
+
+
+
+/* section_4 시작 */
+#section_4 { background: #fff; }
+
+
+/* 제품 (믹서기 및 물) 시작 */
+#section_4 .img_box { width: 100%; height: 100%; position: absolute; }
+
+
+/* left_box 시작 */
+#section_4 .img_box .left_box { width: 50.66%; height: 88.88%; position: absolute; top: 8.48%; }
+
+#section_4 .img_box .left_box .water { width: 100%; height: 77.7%; position: absolute; top: 12.13%; background-image: url(../img/section/left_water.png); background-repeat: no-repeat; background-size: contain; }
+
+#section_4 .img_box .left_box .blender { width: 36.5%; height: 88.9%; position: absolute; left: 31.5%; bottom: 0;  background-image: url(../img/section/blender.png); background-repeat: no-repeat; background-size: contain; }
+
+
+/* right_box 시작 */
+#section_4 .img_box .right_box { width: 34.06%; height: 40.20%; position: absolute; right: 0; top: 50.4%; background-image: url(../img/section/right_water.png); background-repeat: no-repeat; background-size: contain; }
+
+
+/* section_4 텍스트 시작 */
+#section_4 .text_box { width: 256px; height: auto; position: absolute; top: 35.75%; left: 53.71%; background: rgba(255,255,255,0.5); }
+
+#section_4 .text_box .title_wrap span:first-child { color: #111; }
+
+#section_4 .text_box .title_wrap span:last-child { color: #c00c0c; }
+
+#section_4 .text_box .but { width: 156px; height: 55px; border: 2px solid #d35959; box-sizing: border-box; border-radius: 28px; margin-top: 70px; display: none; }
+
+#section_4 .text_box .but a { display: block; width: 100%; height: 100%; color: #c00c0c; text-align: center; line-height: 51px; font-size: 18px; font-weight: 500; letter-spacing: -0.5px; }
+
+
+
+/* section_5 시작 */
+#section_5 { background-image: url(../img/section/section_5_bg.jpg); background-repeat: no-repeat; background-size: cover; }
+
+/* 믹서기날 (제품) 시작 */
+#section_5 .img_box { width: 33.85%; height: 72%; position: absolute; top: 20.8%; right: 14.32%; background-image: url(../img/section/blender_cut.png); background-repeat: no-repeat; background-size: contain; }
+
+
+/* 믹서기날 설명 시작 */
+#section_5 .text_box { width: 340px; height: auto; position: absolute; top: 37.87%; left: 15%;  }
+
+#section_5 .text_box .small_title { color: #111; }
+
+#section_5 .text_box .big_title { color: #c00c0c; }
+
+#section_5 .text_box .text_con { color: #252525; }
+
+
+
+/* section_6 시작 */
+#section_6 { /*background-image: url(../img/section/section_6_bg.jpg); background-repeat: no-repeat; background-size: cover;*/ background: #000; }
+
+#section>img { position: absolute; left: 0; top: 0; width: 118%; height: auto; } 
+
+/* 그릴 (제품 이미지) 시작 */
+#section_6 .img_box { width: 76.04%; height: 35.55%; position: absolute; top: 58.9%; left: 20.10%; }
+
+#section_6 .img_box .food { width: 30.95%; height: 77.23%; float: left; margin-right: 1.3%; position: absolute; bottom: 0; background-image: url(../img/section/food.png);  background-repeat: no-repeat; background-size: contain; }
+
+#section_6 .img_box .grill { width: 67.95%; height: 99.6%; float: right; background-image: url(../img/section/grill.png); background-repeat: no-repeat; background-size: contain; }
+
+
+/* 그릴 텍스트 시작 */
+#section_6 .text_box { width: 368px; height: auto; position: absolute; top: 26.16%; left: 18.59%; }
+
+#section_6 .text_box .title_wrap .small_title { color: #fff; }
+
+#section_6 .text_box .title_wrap .big_title { color: #bb000f; }
+
+#section_6 .text_box p { color: #fff; }
+
+#section_6 .text_box .but { border: 2px solid #fff; display: none; }
+
+#section_6 .text_box .but a { color: #fff; }
+
+
+
+/* section_7 시작 */
+#section_7 { background-image: url(../img/section/section_7_bg.jpg); background-repeat: no-repeat; background-size: cover; }
+
+
+/* 그라데이션 센서 이미지 시작 */
+#section_7 .img_box { width: 33.38%; height: 64.74%; position: absolute; top: 23%; left: 14.53%; }
+
+#section_7 .img_box .grad { width: 100%; height: 100%; background-image: url(../img/section/grad.gif); background-repeat: no-repeat; background-size: contain; position: absolute; z-index: 2; }
+
+#section_7 .img_box .color_ch { width: 80%; height: 80%; position: absolute; top: 50%; left: 50%; z-index: 1; border-radius: 50%; background-image: radial-gradient(160px, #ffdada, #ef4242); /*animation-name: color; animation-duration: 20s; animation-timing-function: linear; animation-iteration-count: infinite;*/ }
+
+@keyframes color {
+    
+    0% { background-image: radial-gradient(160px, #ffdada, #ef4242); }
+    16.6% { background-image: radial-gradient(160px, #ffd6c4, #ee6932); }
+    33.3% { background-image: radial-gradient(160px, #ffefc4, #ffc000); }
+    50% { background-image: radial-gradient(160px, #f6ffd6, #beda3e); }
+    66.6% { background-image: radial-gradient(160px, #d6f9ff, #006bbd); }
+    83.3% { background-image: radial-gradient(160px, #f1daff, #935edf); }
+    100% { background-image: radial-gradient(160px, #ffdafc, #e272a8); }
+}
+
+
+/* 그라데이션 센서 텍스트 시작 */
+#section_7 .text_box { width: 354px; height: auto; position: absolute; top: 44.52%; left: 55.78%; }
+
+#section_7 .text_box .title_wrap span:first-child { color: #bc0000;  }
+
+#section_7 .text_box .title_wrap span:last-child { color: #111;  }
+
+#section_7 .text_box p { color: #151515;  }
+
+
+
+
+/* section_8 시작 */
+#section_8 { background-image: url(../img/section/section_8_bg.jpg); background-repeat: no-repeat; background-size: cover; }
+
+#section_8 .text_wrap { width: 366px; height: auto; position: absolute; top: 30%; left: 12%; }
+
+#section_8 .text_wrap .red_color { color: #c00c0c; }
+
+#section_8 .text_wrap .black_color { color: #111; }
+
+#section_8 .title_wrap:first-child { width: 100%; margin-bottom: 16px; }
+    
+#section_8 .title_wrap:first-child span:first-child { font-size: 50px; }
+
+#section_8 .text_wrap:first-child span:last-child { font-size: 38px; font-weight: 800; letter-spacing: -1px; }
+
+#section_8 .text_wrap .title_wrap:nth-child(2) { width: 100%; margin-bottom: 87px; }
+
+#section_8 .text_wrap .title_wrap:nth-child(2) span:first-child { font-size: 50px; font-weight: 800; }
+    
+#section_8 .text_wrap .title_wrap:nth-child(2) span:last-child { font-size: 70px; font-weight: 800; }
+
+#section_8 .text_wrap .but { border: 2px solid #c00c0c; color: #c00c0c; display: none; }
+
+#section_8 .text_wrap a { color: #c00c0c; }
+
+
+/* footer 시작 */
+footer { float: left; }
+
+footer .top_footer { width: 100%; height: 65px; border-top: 2px solid #dc4848; border-bottom: 2px solid #dc4848; background: #fff; }
+
+footer .top_footer .width_align { height: 100%; padding: 0 70px; box-sizing: border-box; }
+
+footer .top_footer .width_align li { width: 12.5%; height: 100%; float: left; text-align: center; line-height: 65px; font-size: 14px; color: #383838; }
+    
+footer .bottom_footer { width: 100%; height: auto; padding: 40px 0 53px 0; background: #fff; }
+
+footer .bottom_footer h1 { width: 125px; height: 25px; margin: 0 auto; margin-bottom: 16px; cursor: pointer; }
+
+footer .bottom_footer img { width: 100%; height: auto; }
+    
+footer .bottom_footer .copy { width: 277px; height: 10px; margin: 0 auto; font-size: 12px; font-weight: 500; }
+    
+    
+}/*end*/

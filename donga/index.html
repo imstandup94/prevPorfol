@@ -1,0 +1,390 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>동아제약</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        <link rel="shortcut icon" href="img/title.ico" type="image/x-icon">
+		<link href="css/pc.css" rel="stylesheet" type="text/css" />
+		<link href="css/note.css" rel="stylesheet" type="text/css" />
+		<link href="css/tab.css" rel="stylesheet" type="text/css" />
+		<link href="css/mobile.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+            * { margin: 0; padding: 0; font-family: 'Godo', 'Sans-serif'; }
+            ul,li { list-style: none; }
+            a { text-decoration: none; color: #333; }
+            img { float: left; border:0; }
+            html,body { overflow-x: hidden; font-weight: 600; }
+            @import url('//cdn.rawgit.com/young-ha/webfont-archive/master/css/Godo.css');
+            
+            /* 사회공헌 부분 해당버튼시, 가로값 변경 */
+            #section_4 article .small_con .but_wrap .but.but_width { width: 60px; background: #40b2cb; }
+            
+            #section_4 article .small_con .small_img img.img_size { transform: scale(1.2); box-shadow: 5px 5px 3px rgba(0,0,0,0.5); }
+            
+        </style>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/jquery.transit.min.js"></script>
+        <script src="js/index.js"></script>
+	</head>
+
+	<body>
+        
+       <!-- wrap -->
+        <div id="wrap" class="wrap_height">
+            
+            <!-- 숨김메뉴 --> 
+            <div id="menu_wrap">
+                <header>
+                    <h1 class="logo"></h1>
+                    <h1 class="menu close" id="menu_hide"></h1>
+                </header>
+                <ul class="hide_menu">
+                    <li>
+                        <a href="#">동아제약</a>
+                    </li>
+                    <li>
+                        <a href="#">제품소개</a>
+                    </li>
+                    <li>
+                        <a href="#">제품개발</a>
+                    </li>
+                    <li>
+                        <a href="#">사회공헌</a>
+                    </li>
+                    <li>
+                        <a href="#">고객지원(CCM)</a>
+                    </li>
+                    <li>
+                        <a href="#">홍보</a>
+                    </li>
+                    <li>
+                        <a href="#">사이버 감사실</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 패럴랙스 -->
+            <div class="fixed_bg"></div>
+            
+           <!-- header -->
+           <header class="hide">
+               <h1 class="logo"></h1>
+               <h1 class="menu" id="show_menu"></h1>
+           </header>
+            
+            <!-- main -->
+            <section id="main">
+                <div class="black_box">
+                    <h1></h1>
+                    <h1></h1>
+                </div>
+                <img id="main_6" src="img/main_6.jpg" alt="" />
+                <img id="main_5" src="img/main_5.jpg" alt="" />
+                <img id="main_4" src="img/main_4.jpg" alt="" />
+                <img id="main_3" src="img/main_3.jpg" alt="" />
+                <img id="main_2" src="img/main_2.jpg" alt="" />
+                <img id="main_1" src="img/main_1.jpg" alt="" />
+                <div class="svg_wrap">
+                    <embed src="css/donga_logo.svg" id="donga_svg_logo">
+                </div>
+            </section>
+            
+            <!-- 회사소개 -->
+            <section id="section_1" class="hide">
+                <div class="section_1_con">
+                    <!-- 회사 간략소개 -->
+                    <div class="text_wrap">
+                        <span><big>동아제약</big>은 창립 당시의 ‘좋은 의약품을 생산하여 국민 건강에 이바지한다’는 창업정신을 그대로 계승해 국내 최고의 헬스케어 전문기업으로 성장해 나갈 것입니다.</span>
+                     
+                        <!-- 아이콘 -->
+                        <div class="icon_wrap">
+                            <div>
+                                <div></div>
+                                <h4>회사소개</h4>
+                            </div>
+                            <div>
+                                <div></div>
+                                <h4>CEO 인사말</h4>
+                            </div>
+                            <div>
+                                <div></div>
+                                <h4>가치 및 버전</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </section>
+            
+            
+            <!-- 제품 -->
+            <section id="section_2" class="hide">
+                
+                <div class="pro_box">
+                <!-- 왼쪽상품 -->
+                <div class="left">
+                    
+                    <!-- 가그린 -->
+                    <div class="con" id="ga">
+                        <div class="img_box"></div>
+                        <div class="hover_box">
+                            <div class="one"></div>
+                            <div class="one"></div>
+                            <div class="one"></div>
+                            <div class="one"></div>
+                        </div>
+                        <div class="text_box"><h1>가그린 민트/덴트 액</h1></div>
+                    </div>
+                    
+                    <!-- 판피린 -->
+                    <div class="con" id="pan">
+                        <div class="img_box"></div>
+                        <div class="hover_box">
+                            <div class="one"></div>
+                            <div class="one"></div>
+                        </div>
+                        <div class="text_box"><h1>판피린</h1></div>
+                    </div>
+                </div>
+                
+                    
+                <!-- 오른쪽 상품 -->
+                <div class="right">
+                    
+                    <!-- 베나치오 -->
+                    <div class="con" id="bena">
+                        <div class="img_box"></div>
+                        <div class="hover_box">
+                            <div class="one"></div>
+                            <div class="one"></div>
+                        </div>
+                        <div class="text_box"><h1>베나치오</h1></div>
+                    </div>
+                    
+                    <!-- 염색약 -->
+                    <div class="con" id="cre">
+                        <div class="img_box"></div>
+                        <div class="hover_box">
+                            <div class="one"></div>
+                        </div>
+                        <div class="text_box"><h1>비겐 크림톤</h1></div>
+                    </div>
+                </div>
+                </div>
+                
+                <!-- 버튼 -->
+                <div class="but pc_but">
+                    <a href="#">
+                        <span>더보기</span>
+                        <span>▶</span>
+                    </a>
+                </div>
+                <div class="m_but_wrap">
+                    <div class="but">
+                        <a href="#">
+                         <span>더보기</span>
+                            <span>▶</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <!-- 제품개발 -->
+            <section id="section_3" class="hide">
+                <div class="text_wrap">
+                    
+                    <!-- 제품개발 설명 -->
+                    <h1>제품개발</h1>
+                    <h4>동아제약은 끊임없는 연구, 개발로 국내 최고의 헬스케어 전문기업으로 성장하겠습니다.</h4>
+                    
+                    <!-- 제품개발 아이콘 -->
+                    <div class="icon_wrap">
+                        <div>
+                            <div class="icon_box"></div>
+                            <h4 class="icon_te">R&D</h4>
+                        </div>
+                        <div>
+                            <div class="icon_box"></div>
+                            <h4 class="icon_te">연구성과</h4>
+                        </div>
+                        <div>
+                            <div class="icon_box"></div>
+                            <h4 class="icon_te">과제 및 전략</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <!-- 사회공헌 -->
+            <section id="section_4" class="hide">
+                <article>
+                    
+                    <!-- 내용 및 큰 사진부분 -->
+                    <div class="big_con">
+                        
+                        <!-- 사회공헌 설명 -->
+                        <div class="left">
+                            <div class="title_wrap">
+                                <span>사회공헌</span>
+                                <span>&nbsp;&nbsp;&nbsp;“밝고 따뜻한 사회를 위해 기업의 사회적 책임을 다하겠습니다.”</span>
+                            </div>
+                            <div class="con_wrap">
+                                <span class="color_title">&nbsp;대학생 국토대장정</span><span class="text">은 남녀 각 72명씩, 총 144명의 대학생들이 20박 21일 동안 직접 우리 땅을 두 발로 걸어 완주하는 행사입니다. 본 행사는 ‘온실 속의 화초처럼 자란 대학생들에게 자신을 이기는 강인한 정신력을 기르고 남에 대한 배려와 동료애를 몸소 체험하도록 하자’는 강신호 회장의 의지로 시작되었습니다.</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 큰 사진 -->
+                        <div class="right">
+                            <img src="img/section_4_big.jpg" alt="" />
+                        </div>
+                    </div>
+                    
+                    <!-- 작은 사진 및 버튼부분 -->
+                    <div class="small_con">
+                        <div class="small_img">
+                            <img class="img_size" src="img/section_4_small_1.jpg" alt="" />
+                            <img src="img/section_4_big_2.jpg" alt="" />
+                            <img src="img/section_4_big_3.jpg" alt="" />
+                            <img src="img/section_4_big_4.jpg" alt="" />
+                            <img src="img/section_4_big_5.jpg" alt="" />
+                            <img src="img/section_4_big_6.jpg" alt="" />
+                        </div>
+                        <div class="but_wrap">
+                            <div class="but but_width"></div>
+                            <div class="but"></div>
+                        </div>
+                    </div>
+                </article>
+                <div id="m_section_4">
+                    <div class="title_wrap">
+                        <h1>사회공헌</h1>
+                        <h4>동아제약은 밝고 따뜻한 사회를 만들기 위해 기업의
+사회적 책임을 다하겠습니다.</h4>
+                        <div class="but_wrap">
+                            <div class="but">
+                                <a href="#">
+                                    <span>더보기</span>
+                                    <span>▶</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <!-- 고객지원 -->
+            <section id="section_5" class="hide">
+                <div class="text_box">
+                    <h1>고객지원 (CCM)</h1>
+                    <p>동아제약은 언제나 고객님의 편의를 먼저 생각합니다.</p>
+                    <div class="but">
+                        <a href="#">
+                            <span>문의하기</span>
+                            <span>▶</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <!-- 광고영상, 새소식, 사이버감사실 -->
+            <section id="section_6" class="hide">
+                
+                <article>
+                
+                    <!-- 광고영상 -->
+                    <div class="left">
+                        <div class="title_wrap">
+                            <div>
+                                <div></div>
+                                <span>광고영상</span>
+                                <span>나를 아끼자, 2018년 박카스 광고 '최고의 승진'편</span>
+                            </div>
+                            
+                        </div>
+                        <div class="video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vitJZe9oVfs?start=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                
+                    <!-- 새소식, 사이버감사실 -->
+                    <div class="right">
+                        <div class="news">
+                            <div class="title_wrap">
+                                <span>새소식</span>
+                                <span>+ 더보기</span>
+                                <div class="plus">+</div>
+                            </div>
+                            <div class="con_wrap">
+                                <div class="con">
+                                    <h1>동아제약, 박카스 TV광고 ‘최고의 승진’ 편 선보여</h1>
+                                    <h4>동아제약(대표이사 사장 최호진)은 피로회복제 박카스 새 TV 광고 ‘최고의 승진’편을 선보인다고 25일 밝혔다. 이번 최고의 승진편은 육아하는 아빠를 소재로, 육아와 사회적 목표를 병행하며 열심히 살아가는 이 시대 아빠의 모습을 담...</h4>
+                                    <h6>2018-07-25</h6>
+                                </div>
+                                <div class="con">
+                                    <h1>‘제21회 동아제약 대학생 국토대장정’ 청춘들의 도전 마침표를 찍다</h1>
+                                    <h4>더 넓은 세상으로 나아가기 위한 청춘들의 뜨겁고 열정 넘쳤던 도전이 드디어 마침표를 찍었다. 동아제약(대표이사 사장 최호진)은 19일 오후 2시 전라남도 목포시에 위치한 유달경기장에서 박카스와 함께하는 ‘제21회 동아제약 대학생 국...</h4>
+                                    <h6>2018-07-19</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 사이버 감사실 -->
+                        <div class="gray_box">
+                            <div class="text_wrap">
+                                <h1>사이버감사실</h1>
+                                <h4>부정부패 없는 투명경영을 위해 참여해주세요.</h4>
+                                <div class="but">
+                                    <a href="#">
+                                        <span>제보하기</span>
+                                        <span>▶</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </article>
+            </section>
+            
+            
+            <!-- footer -->
+            <footer class="hide">
+                <div class="icon_wrap">
+                    <h1></h1>
+                    <h1></h1>
+                </div>
+                <div class="text">
+                    <span>개인정보취급방침</span>
+                    <span>인재개발원</span>
+                </div>
+                <div class="text">
+                    <span>서울시 동대문구 천호대로 64</span>
+                    <span>TEL. 02-920-8112</span>
+                </div>
+                <h4>ⓒ DONG-A PHARM. All rights reserved.</h4>
+                <div class="site">
+                    <div class="but">
+                        <span>Family Site</span>
+                        <span>▲</span>
+                    </div>
+                    
+                    <div class="but">
+                        <span>Brand Site</span>
+                        <span>▲</span>
+                    </div>
+                </div>
+            </footer>
+            
+        </div>
+        
+        
+        
+        
+	</body>
+</html>

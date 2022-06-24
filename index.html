@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> 다시 일어서리라 :-) </title>
+    
+    <link rel="shortcut icon" href="img/main/web_logo.ico" type="image/x-icon">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="css/pc.css" rel="stylesheet" type="text/css" />
+    <link href="css/note.css" rel="stylesheet" type="text/css" />
+    <link href="css/tab.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobile.css" rel="stylesheet" type="text/css" />
+    
+    <style>
+        * { margin: 0; padding: 0; color: #333; }
+        
+        html,boyd { font-family: 'Noto Sans Korean', sans-serif; }
+        
+        a { text-decoration: none; color: #333; }
+        
+        ul,li { list-style: none; }
+        
+        img { border: 0; float: left; }
+        
+        @font-face { font-family: "BerlinSansFBDemi-Bold"; src: url(font/BerlinSansFBDemi-Bold.otf); }
+        
+        .title { font-family: 'BerlinSansFBDemi-Bold'; }
+        
+        @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+        
+        .kor { font-family: 'Noto Sans Korean', sans-serif; }
+        
+        
+        /* 버튼 가로 변경 */
+        #m_profile .but_wrap .but_width { width: 31px; }
+        
+        
+        /* 애니메이션 (익플 찾아보기)  */
+        /* 메인 테두리 애니메이션 */ 
+        @keyframes main_ani {
+            0% { transform: scale(1,1); }
+            50% { transform: scale(1.03,1.03); }
+            100% { transform: scale(1,1); }
+        }
+        
+        .main_ani { animation-name: main_ani; animation-duration: 2s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; transform-origin: center; }
+        
+        @keyframes main_ani_2 {
+            0% { transform: scale(1,1); }
+            50% { transform: scale(1.065,1.065); }
+            100% { transform: scale(1,1); }
+        }
+        
+        .main_ani_2 { animation-name: main_ani_2; animation-duration: 2s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; transform-origin: 50% 50%; }
+        
+        /* con 애니 */
+        @keyframes con_1 { 
+            0% { transform: translate(0,-10px); }
+            50% { transform: translate(0,20px); }
+            100% { transform: translate(0,-10px); }
+        }
+    
+        .con_1 { animation-name: con_1; animation-duration: 3s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; }
+        
+        @keyframes con_2 { 
+            0% { transform: translate(0,20px); }
+            50% { transform: translate(0,-10px); }
+            100% { transform: translate(0,20px); }
+        }
+    
+        .con_2 { animation-name: con_2; animation-duration: 3s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; }
+    
+        
+        
+    
+        /* 그림자 애니 */
+        @keyframes shadow_1 {
+            0% { transform: scale(0.7,0.7); }
+            50% { transform: scale(1,1); }
+            100% { transform: scale(0.7,0.7); }
+        }
+    
+        .shadow_1 { animation-name: shadow_1; animation-duration: 3s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; }
+        
+        @keyframes shadow_2 {
+            0% { transform: scale(1,1); }
+            50% { transform: scale(0.7,0.7); }
+            100% { transform: scale(1,1); }
+        }
+    
+        .shadow_2 { animation-name: shadow_2; animation-duration: 3s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; }
+    
+    
+    
+        /* 클릭 미 애니메이션 */
+        @keyframes click_me_ani {
+            0% { opacity: 1; }
+            25% { opacity: 0.8; }
+            50% { opacity: 1; }
+            75% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+        
+        .click_me_ani { animation-name: click_me_ani; animation-duration: 1.2s; animation-timing-function: ease-in; animation-iteration-count: infinite; }
+        
+        
+        
+        /* 화살표 애니 */
+        @keyframes arrow_ani { 
+            0% { transform: scaleX(0.8); }
+            50% { transform: scaleX(1); }
+            100% { transform: scaleX(0.8); }
+        }
+    
+        .arrow_ani { animation-name: arrow_ani; animation-duration: 2s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; transform: scaleX(1); }
+        
+    </style>
+    
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrap">
+        
+        
+    
+        <!-- 로고 및 메뉴 -->
+        <header>
+            <h2 class="logo"><a href="index.html"></a></h2>
+            
+            <!-- 메뉴 아이콘 -->
+            <div class="menu_icon">
+                <h3 class="menu"></h3>
+            </div>
+        </header>
+        
+        
+        <!-- 메뉴 -->
+        <section id="menu_wrap">
+            <header>
+                <!-- 로고 -->
+                <h2 class="logo"><a href="index.html"></a></h2>
+            
+                <!-- 메뉴 아이콘 -->
+                <div class="menu_icon">
+                    <h3 class="close"></h3>
+                </div>
+            </header>
+            
+            <!-- 메뉴 내용 -->
+            <ul class="main_menu">
+                <li class="title">profile</li>
+                <li class="title">portfolio</li>
+                <li class="title">work</li>
+                <li class="title">contact</li>
+            </ul>
+            <div class="me"></div>
+            
+            <!-- 카피라이터 -->
+            <h1 class="copy">Copyright (C) SEORIRA All Rights Reserved.</h1>
+        </section>
+        
+        
+        
+        <!-- 포트폴리오 클릭시 화면창 -->
+        <section id="portfolio_work">
+            
+            
+            <!-- 맥심커피 -->
+            <!--    <div class="bg port_con_1">
+                    <h3 class="portfolio_close"></h3>
+                    <div class="top">
+                        <div class="left">
+                            <div class="bg_fr"></div>
+                            <div class="img"><a href="maximcoffee/index.html" target="_blank"></a></div>
+                            <h3>맥심커피&nbsp;<small>( 위 이미지를 클릭해주세요. )</small></h3>
+                        </div>
+                        
+                        
+                        <div class="right">
+                            <div class="text_wrap">
+                                <h3>제작 프로그램 </h3>
+                                <h4>Photoshop, Brackets</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>제작 기간 </h3>
+                                <h4>디자인 2주, 코딩 2주</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>적용 기반</h3>
+                                <h4>반응형 웹</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>색상</h3>
+                                <div class="color_wrap">
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <h3>기획의도</h3>
+                        <h4>&nbsp;맥심커피의 주조색인 노란색과 갈색 계열을 이용해서 따뜻하고 부드러운 이미지를 표현했습니다. 전체적으로 맥심의 다양한 제품을 한눈에 보기 쉽게 디자인 했습니다.</h4>
+                    </div>
+                </div>-->
+            
+            
+            <!-- 나이키 -->
+                <div class="bg port_con_1">
+                    <h3 class="portfolio_close"></h3>
+                    
+                    <!-- 포트폴리오 윗줄 -->
+                    <div class="top">
+                        <!-- 왼쪽 -->
+                        <div class="left">
+                            <div class="bg_fr"></div>
+                            <div class="img"><a href="nike/index.html" target="_blank"></a></div>
+                            <h3>나이키&nbsp;<small>( 위 이미지를 클릭해주세요. )</small></h3>
+                        </div>
+                        
+                        <!-- 오른쪽 -->
+                        <div class="right">
+                            <div class="text_wrap">
+                                <h3>제작 프로그램 </h3>
+                                <h4>Photoshop, Brackets</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>제작 기간 </h3>
+                                <h4>디자인 3일, 코딩 5일</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>적용 기반</h3>
+                                <h4>반응형 웹</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>색상</h3>
+                                <div class="color_wrap">
+                                    <div class="color" style="background: #d22d34;"></div>
+                                    <div class="color" style="background: #ff861b;"></div>
+                                    <div class="color" style="background: #272727;"></div>
+                                    <div class="color" style="background: #fff;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 포트폴리오 아랫줄 -->
+                    <div class="bottom">
+                        <h3>기획의도</h3>
+                        <h4>&nbsp;나이키의 활동적인 브랜드 이미지를 고려해서 활발한 느낌을 주고자 했습니다. 제품의 색상이 다양하기 때문에 주조색 및 보조색은 단조로운면서도 포인트를 줄 수 있는 색으로 선택했습니다.</h4>
+                    </div>
+                </div>
+            
+            
+            
+            <!-- 이니스프리 -->
+                <div class="bg port_con_2">
+                    <h3 class="portfolio_close"></h3>
+                    
+                    <!-- 포트폴리오 윗줄 -->
+                    <div class="top">
+                        <!-- 왼쪽 -->
+                        <div class="left">
+                            <div class="bg_fr"></div>
+                            <div class="img"><a href="innisfree/index.html" target="_blank"></a></div>
+                            <h3>이니스프리&nbsp;<small>( 위 이미지를 클릭해주세요. )</small></h3>
+                        </div>
+                        
+                        <!-- 오른쪽 -->
+                        <div class="right">
+                            <div class="text_wrap">
+                                <h3>제작 프로그램 </h3>
+                                <h4>Photoshop, Brackets</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>제작 기간 </h3>
+                                <h4>디자인 1주, 코딩 1주</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>적용 기반</h3>
+                                <h4>반응형 웹</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>색상</h3>
+                                <div class="color_wrap">
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 포트폴리오 아랫줄 -->
+                    <div class="bottom">
+                        <h3>기획의도</h3>
+                        <h4>&nbsp;이니스프리의 주조색인 녹색 계열을 이용해서 자연친화적인 느낌을 주며, 제품에 더 시선이 집중될 수 있도록 전체적으로 직관적이고 깔끔하게 디자인 했습니다.</h4>
+                    </div>
+                </div>
+            
+            
+            
+            <!-- 개인 포폴 -->
+                <div class="bg port_con_3">
+                    <h3 class="portfolio_close"></h3>
+                    
+                    <!-- 포트폴리오 윗줄 -->
+                    <div class="top">
+                        <!-- 왼쪽 -->
+                        <div class="left">
+                            <div class="bg_fr"></div>
+                            <div class="img"><a href="simple/index.html" target="_blank"></a></div>
+                            <h3>개인 홈페이지 리뉴얼전&nbsp;<small>( 위 이미지를 클릭해주세요. )</small></h3>
+                        </div>
+                        
+                        <!-- 오른쪽 -->
+                        <div class="right">
+                            <div class="text_wrap">
+                                <h3>제작 프로그램</h3>
+                                <h4>Illustrator, Brackets</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>제작 기간 </h3>
+                                <h4>디자인 5일, 코딩 7일</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>적용 기반</h3>
+                                <h4>반응형 웹</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>색상</h3>
+                                <div class="color_wrap">
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 포트폴리오 아랫줄 -->
+                    <div class="bottom">
+                        <h3>기획의도</h3>
+                        <h4>&nbsp;2차원적으로 이동하지 않고 앞뒤로 이동하게 했습니다. 전체적으로 밝은 느낌을 주고자 밝은 색을 사용했으며, 역동적으로 움직이게 만들었습니다.</h4>
+                    </div>
+                </div>
+            
+            
+            
+            <!-- 테팔 -->
+                <div class="bg port_con_4">
+                    <h3 class="portfolio_close"></h3>
+                    
+                    <!-- 포트폴리오 윗줄 -->
+                    <div class="top">
+                        <!-- 왼쪽 -->
+                        <div class="left">
+                            <div class="bg_fr"></div>
+                            <div class="img"><a href="tefal/index.html" target="_blank"></a></div>
+                            <h3>테팔&nbsp;<small>( 위 이미지를 클릭해주세요. )</small></h3>
+                        </div>
+                        
+                        <!-- 오른쪽 -->
+                        <div class="right">
+                            <div class="text_wrap">
+                                <h3>제작 프로그램</h3>
+                                <h4>Photoshop, Brackets</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>제작 기간 </h3>
+                                <h4>디자인 3일, 코딩 3일</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>적용 기반</h3>
+                                <h4>반응형 웹</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>색상</h3>
+                                <div class="color_wrap">
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 포트폴리오 아랫줄 -->
+                    <div class="bottom">
+                        <h3>기획의도</h3>
+                        <h4>&nbsp;이용자를 20대 중후반에서 60대 사이로 잡았기 때문에 영어를 사용하지 않고 한글만 사용했으며, 제품에 시선이 바로 갈 수 있게 직관적이고 군더더기 없이 디자인 했습니다.</h4>
+                    </div>
+                </div>
+            
+            
+            
+            
+            <!-- 동아제약 -->
+                <div class="bg port_con_5">
+                    <h3 class="portfolio_close"></h3>
+                    
+                    <!-- 포트폴리오 윗줄 -->
+                    <div class="top">
+                        <!-- 왼쪽 -->
+                        <div class="left">
+                            <div class="bg_fr"></div>
+                            <div class="img"><a href="donga/index.html" target="_blank"></a></div>
+                            <h3>동아제약&nbsp;<small>( 위 이미지를 클릭해주세요. )</small></h3>
+                        </div>
+                        
+                        <!-- 오른쪽 -->
+                        <div class="right">
+                            <div class="text_wrap">
+                                <h3>제작 프로그램 </h3>
+                                <h4>Photoshop, Brackets</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>제작 기간 </h3>
+                                <h4>디자인 3일, 코딩 3일</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>적용 기반</h3>
+                                <h4>반응형 웹</h4>
+                            </div>
+                            
+                            <div class="text_wrap">
+                                <h3>색상</h3>
+                                <div class="color_wrap">
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                    <div class="color"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 포트폴리오 아랫줄 -->
+                    <div class="bottom">
+                        <h3>기획의도</h3>
+                        <h4>&nbsp;딱딱하고 지루한 내용을 자유로운 레이아웃으로 디자인하여 더 즐겁게 정보를 얻을 수 있게 했습니다. 전체적으로 푸른계열을 사용해서 편안하고 안정된 느낌을 전달하고자 했습니다.</h4>
+                    </div>
+                </div>
+            
+            
+        </section>
+        
+        
+        <!-- 작업물 클릭시 화면창 -->
+        <section id="work_wrap">
+            
+            <!-- 맥날, 맥심커피 -->
+            <div class="bg work_con_1">
+                <div class="work_close"></div>
+                <!-- img_wrap -->
+                <div class="img_wrap work_1_img_wrap">
+                    <div class="con">
+                        <img src="img/work/maximcoffee.jpg" alt="맥심커피" />
+                    </div>
+                    <div class="con">
+                        <img src="img/work/mcdonald.jpg" alt="맥날" />
+                    </div>
+                </div>
+                
+                <!-- work_arrow -->
+                <div class="work_arrow">
+                    <h3 class="it work_arrow_1"></h3>
+                    <h3 class="it work_arrow_1"></h3>
+                </div>
+            </div>
+            
+            <!-- 일러 -->
+            <div class="bg work_con_2">
+                <div class="work_close"></div>
+                <div class="con"></div>
+            </div>
+            
+            <!-- 그림 -->
+            <div class="bg work_con_3">
+                <div class="work_close"></div>
+                <div class="con_mask">
+                    <div class="con_box">
+                        <img src="img/work/new.jpg" alt="" />
+                        <img src="img/work/loding.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="work_arrow">
+                    <h3 class="it work_arrow_3"></h3>
+                    <h3 class="it work_arrow_3"></h3>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        
+        <!-- 작업물 -->
+        <section id="work">
+            
+            <!-- 뒤로가기(홈으로 가기) 버튼 -->
+            <h1 class="back_but"></h1>
+            
+            <div class="width_align">
+                <h2 class="title">work</h2>
+                <h4 class="title_text lor">돌멩이를 클릭하시면 디자인 및 코딩 작업물을 보실 수 있습니다.</h4>
+                
+                <!-- 작업물 내용 -->
+                <div class="con_wrap">
+                    
+                    <!-- 윗줄 -->
+                    <div class="top">
+                        <div class="work_con">
+                            <div class="con con_1"><a href="#"></a></div>
+                            <div class="shadow shadow_1"></div>
+                        </div>
+
+                        <div class="work_con">
+                            <div class="con con_2"><a href="#"></a></div>
+                            <div class="shadow shadow_2"></div>
+                        </div>
+                        
+                        <div class="work_con">
+                            <div class="con con_1"><a href="test/book/index.html" target="_blank"></a></div>
+                            <div class="shadow shadow_1"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 아랫줄 -->
+                    <!--<div class="bottom">
+                        <div class="work_con">
+                            <div class="con con_2"><a href="test/clipping_mask/index.html" target="_blank"></a></div>
+                            <div class="shadow shadow_2"></div>
+                        </div>
+                        
+                        <div class="work_con">
+                            <div class="con con_1"><a href="#"></a></div>
+                            <div class="shadow shadow_1"></div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <div id="work_but"></div>
+        
+        </section>
+        
+        
+        <!-- 중간 박스 -->
+        <div class="center_align">
+            
+        <!-- 연락처 -->
+        <section id="contact">
+            
+            <!-- 뒤로가기(홈으로 가기) 버튼 -->
+            <h1 class="back_but"></h1>
+            
+            <div class="width_align">
+                <h2 class="title">contact</h2>
+                <h4 class="title_text lor">포트폴리오를 봐주셔서 감사합니다.</h4>
+                
+                <div class="con_wrap">
+                    
+                    <!-- 얼굴 -->
+                    <div class="face"></div>
+                    
+                    <!-- 손 -->
+                    <div class="hand_wrap">
+                        <div class="left_hand"></div>
+                        <div class="right_hand"></div>
+                    </div>
+                    
+                    <!-- 배경 -->
+                    <div class="bg"></div>
+                    
+                    <!-- 텍스트 -->
+                    <div class="text_wrap">
+                        
+                        <!-- 텍스트 -->
+                        <h3>아직까지 부족한 부분이 많지만 늘 노력하는 서리라가 되겠습니다.<br/>포트폴리오가 마음에 드셨다면 아래로 주시면 감사합니다!</h3>
+                        
+                        <!-- 연락수단 -->
+                        <div class="icon_wrap">
+                            <div class="icon_box">
+                                <div class="icon"></div>
+                                <h5>imstandup</h5>
+                            </div>
+                            
+                            <div class="icon_box">
+                                <div class="icon"></div>
+                                <h5>mylightbora@gmail.com</h5>
+                            </div>
+                            
+                            <div class="icon_box">
+                                <div class="icon"></div>
+                                <h5>im___standup</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+            
+            <!-- 메인 -->
+            <section id="main_wrap">
+                
+                <!-- 메인 내용 -->
+                <div id="main">
+                
+                <!-- 해 -->
+                <div class="sun_bg"></div>
+                <div class="sun"></div>
+            
+                <!-- 구름 -->
+                <div class="cloud_1"></div>
+                <div class="cloud_2"></div>
+                <div class="cloud_3"></div>
+            
+                <!-- 새 -->
+                <div class="bird_1"></div>
+                <div class="bird_2"></div>
+                <div class="bird_3"></div>
+                <div class="bird_4"></div>
+            
+            
+                <!-- 산 -->
+                <div class="mountain_1"></div>
+                <div class="mountain_2"></div>
+                
+                <!-- 작업물 -->
+                <div class="work_bg"></div>
+                <div class="work"></div>
+                
+                <div class="mountain_3"></div>
+                <div class="mountain_4"></div>
+                <div class="mountain_5"></div>
+            
+                <!-- 야자수 -->
+                <div class="tree_1"></div>
+                <div class="tree_2"></div>
+                <div class="tree_3"></div>
+            
+                <!-- 풀 -->
+                <div class="big_grass_4"></div>
+                <div class="big_grass_3"></div>
+                <div class="big_grass_2"></div>
+                <div class="big_grass_1"></div>
+            
+                <!-- 땅 -->
+                <div class="ground"></div>
+            
+                <!-- 물 -->
+                <div class="water"></div>
+             
+                <!-- 음표 -->
+                <div class="lala_1"></div>
+                <div class="lala_2"></div>
+                <div class="lala_3"></div>
+                <div class="lala_4"></div>
+            
+                <!-- 포트폴리오 -->
+                <div class="portfolio_bg"></div>
+                <div class="portfolio_1"></div>
+                <div class="portfolio_2"></div>
+            
+                <!-- 잔디 -->
+                <div class="small_grass_1"></div>
+                <div class="small_grass_2"></div>
+                <div class="small_grass_3"></div>
+                <div class="small_grass_4"></div>
+                <div class="small_grass_5"></div>
+            
+                <!-- 연락 -->
+                <div class="contact_bg"></div>
+                <div class="contact"></div>
+            
+                <!-- 프로필 -->
+                <div class="profile_bg"></div>
+                <div class="profile"></div>
+                
+            
+            
+            <!-- 카피라이터 -->
+            <h1 class="copy">Copyright (C) SEORIRA All Rights Reserved.</h1>
+        </div>
+            </section>
+            
+            
+        <!-- 포트폴리오 -->
+        <section id="portfolo">
+            
+            <!-- 뒤로가기(홈으로 가기) 버튼 -->
+            <h1 class="back_but"></h1>
+            
+            <div class="width_align">
+                <h2 class="title">portfolio</h2>
+                <h4 class="title_text lor">제작 기간을 단축하면서 발전하는 모습을 보실 수 있습니다.</h4>
+                
+                <!-- 포트폴리오 내용 -->
+                <div class="con_wrap">
+                    
+                    <!-- click_me 텍스트 이미지 -->
+                    <div class="text_bg click_me_ani"></div>
+                    
+                    <!-- 포폴 윗줄 -->
+                    <div class="top">
+                        
+                        <!-- 위_첫번째 -->
+                        <div class="item_box">
+                            <div class="smile_wrap con_1">
+                                <h4 class="item"></h4>
+                                <h1 class="smile smile_1"></h1>
+                            </div>
+                            <h5 class="shadow shadow_1"></h5>
+                        </div>
+                        
+                        <!-- 위_첫번째 화살표 -->
+                        <div class="arrow arr_1"></div>
+                        
+                        <!-- 위_두번째 -->
+                        <div class="item_box">
+                            <div class="smile_wrap">
+                                <h4 class="item"></h4>
+                                <h1 class="smile"></h1>
+                            </div>
+                            <h5 class="shadow"></h5>
+                        </div>
+                        
+                        <!-- 위_두번째 화살표 -->
+                        <div class="arrow arr_2"></div>
+                        
+                        <!-- 위_세번째 -->
+                        <div class="item_box">
+                            <div class="smile_wrap">
+                                <h4 class="item"></h4>
+                                <h1 class="smile"></h1>
+                            </div>
+                            <h5 class="shadow"></h5>
+                        </div>
+                    </div>
+                    
+                    <!-- 대각선 화살표 -->
+                    <dic class="arrow_2 arr_3"></dic>
+                    
+                    
+                    <!-- 포폴 아랫줄 -->
+                    <div class="bottom">
+                        <!-- 아래_첫번째 -->
+                        <div class="item_box">
+                            <div class="smile_wrap">
+                                <h4 class="item"></h4>
+                                <h1 class="smile"></h1>
+                            </div>
+                            <h5 class="shadow"></h5>
+                        </div>
+                        
+                        <!-- 아래 화살표 -->
+                        <div class="arrow arr_4"></div>
+                        
+                        <!-- 아래 두번째 -->
+                        <div class="item_box">
+                            <div class="smile_wrap">
+                                <h4 class="item"></h4>
+                                <h1 class="smile"></h1>
+                            </div>
+                            <h5 class="shadow"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+        
+        
+        
+        <!-- 프로필 -->
+        <section id="profile">
+            
+            <!-- 뒤로가기(홈으로 가기) 버튼 -->
+            <h1 class="back_but"></h1>
+            
+            <div class="width_align">
+                <h2 class="title">profile</h2>
+                <h4 class="kor title_text">여러가지 하고 싶은 욕심이 많은 서리라입니다.</h4>
+                
+                <!-- 프로필 설명 박스 -->
+                <div class="con_wrap">
+                    
+                    <!-- 프로필 왼쪽 -->
+                    <div class="left">
+                        <div class="con_box">
+                            <h4 class="kor">다시 일어서리라</h4>
+                            <h5 class="line"></h5>
+                            <h6 class="kor"> 사람은 본인의 이름대로 살아간다는 말이 있습니다. 서리라는 '아무리 힘든 일이 있어도 넘어지지 말고 다시 일어서리라'라는 의미입니다. 힘든 일이 생기면 포기하거나 주저앉지 않고 긍정적인 마인드로 끊임없이 일어설 서리라입니다.</h6>
+                        </div>
+                        
+                        <div class="con_box">
+                            <h4 class="kor">성격</h4>
+                            <h5 class="line"></h5>
+                            <h6 class="icon_box">
+                                <div class="icon">
+                                    <div></div>
+                                    <h5>긍정적</h5>
+                                </div>
+                                <div class="icon">
+                                    <div></div>
+                                    <h5>책임감</h5>
+                                </div>
+                                <div class="icon">
+                                    <div></div>
+                                    <h5>집념</h5>
+                                </div>
+                            </h6>
+                        </div>
+                        
+                        <!--<div class="con_box">
+                            <h4 class="kor">학력</h4>
+                            <h5 class="line"></h5>
+                            <h6 class="kor">경남대학교 문화콘텐츠학과 <small>(2013.03~2018.02)</small><br/>SBS아카데미 컴퓨터아트학원 <small>(2018.01~2018.08)</small></h6>
+                        </div>-->
+                        
+                    </div>
+                    
+                    <div class="center">
+                        <div class="me"></div>
+                        <h1 class="kor">SEORIRA <small>(29)</small></h1>
+                        <h3 class="kor">Web Designer & Publisher</h3>
+                    </div>
+                    
+                    <div class="right">
+                        <div class="con_box">
+                            <h4 class="kor">능력</h4>
+                            <h5 class="line"></h5>
+                            <h6 class="skill_wrap">
+                                <div class="skill_box">
+                                    <div class="red_line"></div>
+                                    <div class="skill ps"></div>
+                                    <div class="num">70%</div>
+                                </div>
+                                
+                                <div class="skill_box">
+                                    <div class="red_line"></div>
+                                    <div class="skill ai"></div>
+                                    <div class="num">65%</div>
+                                </div>
+                                
+                                <div class="skill_box">
+                                    <div class="red_line"></div>
+                                    <div class="skill html"></div>
+                                    <div class="num">85%</div>
+                                </div>
+                                
+                                <div class="skill_box">
+                                    <div class="red_line"></div>
+                                    <div class="skill css"></div>
+                                    <div class="num">90%</div>
+                                </div>
+                                
+                                <div class="skill_box">
+                                    <div class="red_line"></div>
+                                    <div class="skill js"></div>
+                                    <div class="num">80%</div>
+                                </div>
+                            </h6>
+                        </div>
+                        
+                        <div class="con_box">
+                            <h4 class="kor">자격증</h4>
+                            <h5 class="line"></h5>
+                            <h6 class="kor">GTQ 2급 / GTQi 2급 / 웹디자인기능사</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+    </div>
+    
+    
+    
+    
+    <!-- tab, mobile 버전 -->
+    <div id="m_wrap">
+        
+        
+        <!-- 모바일 헤더 -->
+        <header>
+            
+            <!-- 모바일 로고 -->
+            <h3 id="m_logo"><a href="index.html"></a></h3>
+            
+            <!-- 모바일 아이콘 -->
+            <ul class="m_menu_icon">
+                <li class="m_menu"></li>
+            </ul>
+        </header>
+        
+        <!-- 모바일 메뉴 wrap -->
+        <section id="m_menu_wrap">
+            
+            <!-- 모바일 메뉴 헤더 --> 
+            <header>
+                <!-- 모바일 로고 -->
+                <h3 id="m_logo"><a href="index.html"></a></h3>
+            
+                <!-- 모바일 아이콘 -->
+                <ul class="m_menu_icon">
+                    <li class="m_close"></li>
+                </ul>
+            </header>
+            
+            <!-- 모바일 메뉴 -->
+            <ul id="m_menu">
+                <li class="title">profile</li>
+                <li class="title">portfolio</li>
+                <li class="title">work</li>
+                <li class="title">contact</li>
+            </ul>
+            
+            <!-- 메뉴 카피라이트 -->
+            <h3 class="copy kor">Copyright (C) SEORIRA All Rights Reserved.</h3>
+            
+        </section>
+        
+        
+        <!-- 모바일 메인 --> 
+        <section id="m_main_bg"></section>
+        
+        
+        <section id="m_main">
+            
+            <!-- 해 -->
+            <div class="sun_bg"></div>
+            <div class="sun"></div>
+            
+            <!-- 구름 -->
+            <div class="cloud_1"></div>
+            <div class="cloud_2"></div>
+            <div class="cloud_3"></div>
+            
+            
+            <!-- 새 -->
+            <div class="bird_1"></div>
+            <div class="bird_2"></div>
+            <div class="bird_3"></div>
+            
+            <!-- 산 -->
+            <div class="mountain_1"></div>
+            <div class="mountain_2"></div>
+            <div class="mountain_3"></div>
+            <div class="mountain_4"></div>
+            <div class="mountain_5"></div>
+            
+            <!-- 화산 -->
+            <div class="work_bg"></div>
+            <div class="work"></div>
+            
+            
+            <!-- 나무 -->
+            <div class="tree_1"></div>
+            <div class="tree_2"></div>
+            <div class="tree_3"></div>
+            
+            <!-- 풀 -->
+            <div class="big_grass_3"></div>
+            <div class="big_grass_4"></div>
+            <div class="big_grass_1"></div>
+            <div class="big_grass_2"></div>
+            
+            
+            <!-- 땅 -->
+            <div class="ground"></div>
+            
+            <!-- 포폴 -->
+            <div class="portfolio_bg"></div>
+            <div class="portfolio_1"></div>
+            <div class="portfolio_2"></div>
+            
+            
+            <!-- 풀 -->
+            <div class="small_grass_1"></div>
+            <div class="small_grass_2"></div>
+            <div class="small_grass_3"></div>
+            <div class="small_grass_4"></div>
+            <div class="small_grass_5"></div>
+            
+            
+            <!-- 물 -->
+            <div class="water"></div>
+            
+            
+            <!-- 연락처 -->
+            <div class="contact_bg"></div>
+            <div class="contact"></div>
+            
+            <!-- 프로필 -->
+            <div class="profile_bg"></div>
+            <div class="profile"></div>
+            
+            <!-- 카피라이트 -->
+            <h1 class="copy kor">Copyright (C) SEORIRA All Rights Reserved.</h1>
+            
+        </section>
+        
+        
+        
+        <!-- 모바일 프로필 손가락 애니메니션 -->
+        
+        <!-- 모바일 프로필 --> 
+        <section id="m_profile">
+            
+            <!-- 가로 스와이프 -->
+            <div id="m_profile_mask" class="swiper-container">
+                <div id="m_profile_wrap" class="swiper-wrapper">
+                    
+                    <!-- 첫번째 영역(프로필) -->
+                    <article class="swiper-slide">
+                        <div class="me"></div>
+                        <h4 class="kor">SEORIRA <small>(29)</small></h4>
+                        <h5 class="kor">Web Designer & Publisher</h5>
+                    </article>
+                    
+                    <!-- 두번째 영역(프로필) -->
+                    <article class="swiper-slide">
+                        <div class="wrap">
+                        <!-- 첫번째 내용 -->
+                        <div class="con">
+                            <h4 class="kor">다시 일어서리라</h4>
+                            <div class="line"></div>
+                            <h5 class="kor">사람은 본인의 이름대로 살아간다는 말이 있습니다. 서리라는 '아무리 힘든 일이 있어도 넘어지지 말고 다시 일어서리라'라는 의미입니다. 힘든 일이 생기면 포기하거나 주저앉지 않고 긍정적인 마인드로 끊임없이 일어설 서리라입니다.</h5>
+                        </div>
+                        
+                        <!-- 두번째 내용 -->
+                        <div class="con">
+                            <h4 class="kor">성격</h4>
+                            <div class="line"></div>
+                            <div class="icon_wrap">
+                                <div class="icon_box">
+                                    <div class="icon"></div>
+                                    <h6 class="kor">긍정적</h6>
+                                </div>
+                                <div class="icon_box">
+                                    <div class="icon"></div>
+                                    <h6 class="kor">책임감</h6>
+                                </div>
+                                <div class="icon_box">
+                                    <div class="icon"></div>
+                                    <h6 class="kor">집념</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 세번째 내용 -->
+                        <!-- <div class="con">
+                            <h4 class="kor">학력</h4>
+                            <div class="line"></div>
+                            <h5 class="kor">경남대학교 문화콘텐츠학과 <small>(2013.03~2018.02)</small><br/>SBS아카데미 컴퓨터아트학원 <small>(2018.01~2018.08)</small></h5>
+                        </div> -->
+                            
+                        </div>
+                    </article>
+                    
+                    <!-- 세번째 영역(프로필) -->
+                    <article class="swiper-slide">
+                        <div class="wrap">
+                            
+                            <!-- 스킬 -->
+                            <div class="con">
+                                <h4 class="kor">능력</h4>
+                                <div class="line"></div>
+                                
+                                <!-- 스킬 wrap -->
+                                <div class="skill_wrap">
+                                    
+                                    <!-- 스킬 박스 -->
+                                    <div class="skill_box">
+                                        <div class="red_line ps"></div>
+                                        <h5 class="skill"></h5>
+                                        <h6 class="kor">70%</h6>
+                                    </div>
+                                    
+                                    <div class="skill_box">
+                                        <div class="red_line ai"></div>
+                                        <h5 class="skill"></h5>
+                                        <h6 class="kor">65%</h6>
+                                    </div>
+                                    
+                                    <div class="skill_box">
+                                        <div class="red_line html"></div>
+                                        <h5 class="skill"></h5>
+                                        <h6 class="kor">85%</h6>
+                                    </div>
+                                    
+                                    <div class="skill_box">
+                                        <div class="red_line css"></div>
+                                        <h5 class="skill"></h5>
+                                        <h6 class="kor">90%</h6>
+                                    </div>
+                                    
+                                    <div class="skill_box">
+                                        <div class="red_line js"></div>
+                                        <h5 class="skill"></h5>
+                                        <h6 class="kor">80%</h6>
+                                    </div>
+                                        
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- 자격증 -->
+                            <div class="con">
+                                <h4 class="kor">자격증</h4>
+                                <div class="line"></div>
+                                <h5 class="kor">GTQ 2급 / GTQi 2급 / HSK 4,5급 / 웹디자인기능사</h5>
+                            </div>
+                                        
+                        </div>           
+                    </article>
+                    
+                    
+                    <!-- mobile 버전에서만 -->
+                    <article class="swiper-slide">
+                        <div class="wrap">
+                            
+                            
+                            <div class="con">
+                                <h4 class="kor">학력</h4>
+                                <div class="line"></div>
+                                <h5 class="kor">경남대학교 문화콘텐츠학과 <small>(2013.03~2018.02)</small><br/>SBS아카데미 컴퓨터아트학원 <small>(2018.01~2018.08)</small></h5>
+                            </div>
+                            
+                            <div class="con">
+                                <h4 class="kor">자격증</h4>
+                                <div class="line"></div>
+                                <h5 class="kor">GTQ 2급 / GTQi 2급 / HSK 4,5급 / 웹디자인기능사</h5>
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+            
+            <!-- 프로필 타이틀 -->
+            <h1 class="title">profile</h1>
+            <h2 class="title_text">오른쪽으로 넘겨주세요.</h2>
+            
+            <!-- 모바일 프로필 버튼 -->
+            <!--<ul class="but_wrap" id="profile_but">
+                <li class="but but_width"></li>
+                <li class="but"></li>
+                <li class="but"></li>
+            </ul>-->
+            
+        </section>
+        
+        
+        
+        <!-- 모바일 포트폴리오 --> 
+        <section id="m_portfolio">
+            
+            <!-- 포폴 타이틀 -->
+            <h1 class="title">portfolio</h1>
+            <h2 class="title_text">동전을 클릭하시면, 리뉴얼한 홈페이지로 이동됩니다.</h2>
+            
+            <!-- 포트폴리오 동전 -->
+            <div class="con_wrap">
+                
+                <!-- 동전들 -->
+                <div class="con_box">
+                    <div class="m_smile con_1"><a href="innisfree/index.html"></a></div>
+                    <div class="shadow shadow_1"></div>
+                </div>
+                
+                <div class="con_box">
+                    <div class="m_smile  con_2"><a href="simple/index.html"></a></div>
+                    <div class="shadow shadow_2"></div>
+                </div>
+                
+                <div class="con_box">
+                    <div class="m_smile con_1"><a href="nike/index.html"></a></div>
+                    <div class="shadow shadow_1"></div>
+                </div>
+                
+                <div class="con_box">
+                    <div class="m_smile con_2"><a href="tefal/index.html"></a></div>
+                    <div class="shadow shadow_2"></div>
+                </div>
+                
+                <div class="con_box">
+                    <div class="m_smile con_1"><a href="donga/index.html"></a></div>
+                    <div class="shadow shadow_1"></div>
+                </div>
+                
+                
+                <!-- 화살표 -->
+                <h6 class="m_arrow"></h6>
+                <h6 class="m_arrow"></h6>
+                <h6 class="m_arrow"></h6>
+                <h6 class="m_arrow"></h6>
+            </div>
+            
+        </section>
+        
+        
+        
+        <!-- 모바일 작업물 --> 
+        <section id="m_work">
+            
+            <!-- 포폴 타이틀 -->
+            <h1 class="title">work</h1>
+            <h2 class="title_text">돌멩이를 클릭하시면 디자인 및 코딩 작업물을 보실 수 있습니다. ( 작업물이 데스크탑, 노트북 화면 비율에 적합합니다. )</h2>
+            
+            <!-- 작업물 감싸는 부모 -->
+            <div class="con_wrap">
+                
+                <div class="con_box">
+                    <div class="con con_1 work_con"></div>
+                    <div class="shadow shadow_1"></div>
+                </div>
+                
+                <div class="con_box">
+                    <div class="con con_2 work_con"><a href="test/clipping_mask/index.html"></a></div>
+                    <div class="shadow shadow_2"></div>
+                </div>
+                
+                <div class="con_box">
+                    <div class="con con_1 work_con"><a href="test/book/index.html"></a></div>
+                    <div class="shadow shadow_1"></div>
+                </div>
+                
+                <div class="con_box">
+                    <div class="con con_2 work_con"></div>
+                    <div class="shadow shadow_2"></div>
+                </div>
+                
+                <div class="con_box">
+                    <div class="con con_1 work_con"></div>
+                    <div class="shadow shadow_1"></div>
+                </div>
+                
+            </div>
+            
+        </section>
+        
+        <section id="m_work_wrap">
+            
+            <!-- 맥날, 맥심커피 -->
+            <div class="bg work_con_1">
+                <div class="work_close"></div>
+                
+                <!-- mask -->
+                <div class="work_con_1_mask">
+                    <!-- img_wrap -->
+                    <div class="img_wrap tab_img_wrap">
+                        <div class="con_box">
+                            <img src="img/work/maximcoffee.jpg" alt="맥심커피" />
+                        </div>
+                        <div class="con_box">
+                            <img src="img/work/mcdonald.jpg" alt="맥날" />
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- work_arrow -->
+                <div class="work_arrow">
+                    <h3 class="it m_work_arrow_1"></h3>
+                    <h3 class="it m_work_arrow_1"></h3>
+                </div>
+
+            </div>
+            
+            
+            <!-- 일러 -->
+            <div class="bg work_con_2">
+                <div class="work_close"></div>
+                <div class="con_box"></div>
+            </div>
+            
+            <!-- 그림 -->
+            <div class="bg work_con_3">
+                <div class="work_close"></div>
+                <div class="con_mask">
+                    <div class="con_box con_box_2">
+                        <h3></h3>
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="work_arrow">
+                    <h3 class="it m_work_arrow_3"></h3>
+                    <h3 class="it m_work_arrow_3"></h3>
+                </div>
+            </div>
+            
+            
+        </section>
+        
+        
+        <!-- 모바일 연락처 --> 
+        <section id="m_contact">
+        
+            <!-- 연락처 타이틀 -->
+            <h1 class="title">contact</h1>
+            <h2 class="title_text">포트폴리오를 봐주셔서 감사합니다.</h2>
+            
+            <!-- 연락처 내용물 --> 
+            <div class="con_wrap">
+            
+                <div class="bg"></div>
+            
+                <div class="text_wrap">
+                    
+                    <!-- 텍스트 -->
+                    <h3>아직까지 부족한 부분이 많지만 늘 노력하는 서리라가 되겠습니다. 포트폴리오가 마음에 드셨다면 연락 주시면 감사합니다!</h3>
+                        
+                    <!-- 연락수단 -->
+                    <div class="icon_wrap">
+                        <div class="icon_box">
+                            <div class="icon"></div>
+                            <h5>imstandup</h5>
+                        </div>
+                            
+                        <div class="icon_box">
+                            <div class="icon"></div>
+                            <h5>mylightbora@gmail.com</h5>
+                            </div>
+                            
+                        <div class="icon_box">
+                            <div class="icon"></div>
+                            <h5>im___standup</h5>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

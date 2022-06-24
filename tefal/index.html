@@ -1,0 +1,547 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>테팔 | 믹서기, 스팀, 다리미, 커피 머신</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<link href="css/pc.css" type="text/css" rel="stylesheet" />
+		<link href="css/note.css" type="text/css" rel="stylesheet" />
+        <link href="css/tab.css" rel="stylesheet" type="text/css" />
+		<link href="css/mobile.css" type="text/css" rel="stylesheet" />
+        <link rel="shortcut icon" href="img/header/title_logo.ico" type="image/x-icon">
+		<style>
+            @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+            * { margin: 0; padding: 0; }
+            ul,li { list-style: none; }
+            a { text-decoration: none; color: #111; }
+            img { border: 0; float: left; }
+            html,body,a { font-family: 'Nanum Gothic', sans-serif; }
+            html,body { overflow-x: hidden; font-size: 50px; }
+            .header_hide { height: 0; opacity: 0; }
+            .text_ani { opacity: 0; transform: translateY(-50px); }
+        </style>
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/jquery.transit.min.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/index.js"></script>
+	</head>
+
+	<body>
+        
+        <!-- wrap : 노트북, 피씨 버전 -->
+        <div id="wrap">
+        
+            
+            <!-- header -->
+            <header>
+                <div class="width_align">
+                    
+                    <!-- logo -->
+                    <h1 id="logo">
+                        <img src="img/header/logo.png" alt="로고" />
+                    </h1>
+                    
+                    <!-- 메뉴 -->
+                    <ul id="menu_wrap">
+                        <li>
+                            <a href="#">제품</a>
+                        </li>
+                        <li>
+                            <a href="#">테팔 이야기</a>
+                        </li>
+                        <li>
+                            <a href="#">레시피</a>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                        </li>
+                        <li>
+                            <a href="#">테팔 소개</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- side_menu -->
+                    <div id="side_menu">
+                        <div id="search">
+                            <input type="text" placeholder="에어포스 360">
+                            <div class="icon"></div>
+                        </div>
+                        
+                        <h5></h5>
+                        <h5></h5>
+                    </div>
+                </div>
+                
+                
+            </header>
+            
+            <!-- section_wrap -->
+            <div id="section_wrap">
+                
+                <!-- section_1 -->
+                <section id="section_1">
+                    <article class="con_wrap">
+                        <div class="text_box" id="main_text_1">
+                            <div class="title_wrap">
+                                <span>소비자 중심</span>
+                                <span>경영</span>
+                            </div>
+                            <span>인증 획득</span>
+                        </div>
+                    </article>
+                    <article class="con_wrap">
+                        <div class="text_box text_ani" id="main_text_2">
+                            <div class="title_wrap">
+                                <span>10</span>
+                                <span>년간</span>
+                            </div>
+                            <span>수리가능 서비스</span>
+                        </div>
+                    </article>
+                    <div id="arrow">
+                        <img src="img/section/arrow.png" alt="스크롤 아이콘" />
+                    </div>
+                </section>
+                
+                
+                <!-- section_2 -->
+                <section id="section_2">
+                    
+                    <!-- 후라이팬 (제품 이미지) -->
+                        <div class="egg"></div>
+                    
+                    <!-- 후라이팬 텍스트 -->
+                    <div class="text_box">
+                        <div class="title_wrap text_ani">
+                            <span class="small_title">테팔</span>
+                            <span class="big_title">주방용품</span>
+                        </div>
+                        <p class="text_con text_ani">테팔의 주방용품은 최첨단 기술로 최고의 내구성은 물론, 최고로 맛있는 요리를 할 수 있게 도와줍니다.</p>
+                        <div class="but text_ani">
+                            <a href="#">더 보러 가기</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- section_3 -->
+                <section id="section_3">
+                    
+                    <!-- 열센서 (red dot) -->
+                    <div class="img_box"></div>
+                    
+                    <!-- 열센서 설명 -->
+                    <div class="text_box">
+                        <div class="title_wrap text_ani">
+                            <span class="big_title">열 센서</span>
+                            <span class="small_title">기술</span>
+                        </div>
+                        <p class="text_con text_ani">테팔 프라이팬을 예열할 때 열센서의 무늬가 사라지는 온도가 누구나 전문 요리사처럼 맛있는 건강한 요리를 할 수 있는 최적의 온도입니다. 매일매일 완벽한 식감, 색깔, 맛의 요리를 할 수 있습니다.</p>
+                    </div>
+                    
+                </section>
+                
+                
+                <!-- section_4 -->
+                <section id="section_4">
+                    
+                    <!-- 믹서기 (제품 이미지) -->
+                    <div class="img_box">
+                        
+                        <!-- 믹서기, 과일물 -->
+                        <div class="left_box">
+                            <div class="water"></div>
+                            <div class="blender"></div>
+                        </div>
+                        
+                        <!-- 오른쪽 물 -->
+                        <div class="right_box"></div>
+                    </div>
+                    
+                    <!-- 믹서기 설명 -->
+                    <div class="text_box">
+                        
+                        <div class="title_wrap text_ani">
+                            <span class="small_title">테팔</span>
+                            <span class="big_title">믹서기</span>
+                        </div>
+                        
+                        <p class="text_con text_ani">어떤 재료든 남김없이 완벽하게 분쇄하는 스테인리스 스틸 소재의 테팔 블렌드 포스 스틸 믹서기를 만나보세요.</p>
+                        
+                        <div class="but text_ani">
+                            <a href="#">더 보러 가기</a>
+                        </div>
+                        
+                    </div>
+                    
+                </section>
+                
+                
+                <!-- section_5 -->
+                <section id="section_5">
+                    
+                    <!-- 믹서기 날 (제품 이미지) -->
+                    <div class="img_box"></div> 
+                    
+                    <!-- 믹서기날 설명 -->
+                    <div class="text_box">
+                        <div class="title_wrap text_ani">
+                            <span class="small_title">스테인리스</span>
+                            <span class="big_title"> 4중 칼날</span>
+                        </div>
+                        <p class="text_con text_ani">어떠한 재료든 완벽하게 갈리는 블렌딩을 느껴보세요! 스테인리스 6중날과 3가지 모션, 1200W의 강력한 모터힘으로 요리가 더 편리하고 완벽해집니다 1분당 28000번 회전하고 1200W의 강력한 모터로 최상의 분쇄력을 자랑합니다. </p>
+                    </div>
+                    
+                    
+                </section>
+                
+                
+                <!-- section_6 -->
+                <section id="section_6">
+                    <img  src="img/section/section_6_bg_2.jpg" alt="" />
+                    <!-- 그릴 (제품 이미지) -->
+                    <div class="img_box">
+                        <div class="food"></div>
+                        <div class="grill"></div>
+                    </div>
+                    
+                    <!-- 그릴 설명 -->
+                    <div class="text_box">
+                        <div class="title_wrap text_ani">
+                            <span class="small_title">테팔</span>
+                            <span class="big_title">전열조리기구</span>
+                        </div>
+                        <p class="text_con text_ani">고기부터 토스트, 햄버거, 감자튀김, 아이 간식까지 적절 온도를 유지해서 맛있게 요리하는 테팔 전열조리기구를 만나보세요.</p>
+                        <div class="but text_ani">
+                            <a href="#">더 보러 가기</a>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                <!-- section_7 -->
+                <section id="section_7">
+                    
+                    <!-- 그라데이션 센서 (제품 이미지) -->
+                    <div class="img_box">
+                        <div class="grad"></div>
+                        <div class="color_ch"></div>
+                    </div>
+                    
+                    <!-- 그라데이션 센서 설명 -->
+                    <div class="text_box">
+                        <div class="title_wrap text_ani">
+                            <span class="big_title">자동 센서</span>
+                            <span class="small_title">쿠킹</span>
+                        </div>
+                        
+                        <p class="text_con text_ani">취향저격, 원하는 굽기로 구워주는 3단 요리상태 표시창! 더 바삭하게
+먹고 싶다면, 굽기를 알려주는 알림창의 색을 확인하세요! 색깔에 따라 원하는 익힘 정도를 따라가면 맛있는 그릴요리가 됩니다. 빨간색이 될수록 더 바삭해집니다.</p>
+                    </div>
+                    
+                    
+                </section>
+                
+                
+                <!-- section_8 -->
+                <section id="section_8">
+                    
+                    <!-- 텍스트 -->
+                    <div class="text_wrap">
+                        <div class="title_wrap text_ani">
+                            <span class="small_title red_color">행복한 맛</span>
+                            <span class="black_color">이 가득한</span>
+                        </div>
+                        <div class="title_wrap text_ani">
+                            <span class="small_title black_color">테팔</span>
+                            <span class="big_title red_color">레시피</span>
+                        </div>
+                        <div class="but text_ani">
+                            <a href="#">레시피 보기</a>
+                        </div>
+                    </div>
+                    
+                </section>
+                
+            </div>
+            
+            <!-- footer -->
+            <footer>
+                <div class="top_footer">
+                    <ul class="width_align">
+                        <li>
+                            <a href="#">고객 서비스</a>
+                        </li>
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">그룹 세브</a>
+                        </li>
+                        <li>
+                            <a href="#">사이트맵</a>
+                        </li>
+                        <li>
+                            <a href="#">법적고지</a>
+                        </li>
+                        <li>
+                            <a href="#">회원가입</a>
+                        </li>
+                        <li>
+                            <a href="#">로그인</a>
+                        </li>
+                        <li>
+                            <a href="#">회원 정보 변경</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom_footer">
+                    <h1>
+                        <img src="img/section/footer_logo.png" alt="로고" />
+                    </h1>
+                    <h4 class="copy">COPYRIGHT 2018 TETAL. ALL RIGHTS RESERVED.</h4>
+                </div>
+            </footer>
+            
+        </div>
+        
+        
+        <!-- m_wrap : 모바일, 테블릿 버전 -->
+        <div id="m_wrap">
+            
+            <!-- header -->
+            <header>
+                <h3 id="m_menu"></h3>
+                <h3 id="m_logo"></h3>
+                <h3 id="m_mark_wrap">
+                    <div></div>
+                    <div></div>
+                </h3>
+            </header>
+            
+            <!-- 모바일 메뉴 -->
+            <div id="m_menu_wrap">
+                
+                <div class="top_header">
+                    <h1 id="close"></h1>
+                    <h1 id="menu_logo"></h1>
+                </div>
+                
+                
+                <ul>
+                    <li>
+                        <a href="#">제품</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">테팔 이야기</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">레시피</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">테팔 소개</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            
+            <!-- m_section_wrap -->
+            <div id="m_section_wrap">
+                
+                <!-- m_section_1 -->
+                <section id="m_section_1">
+                    
+                    <article class="m_con_wrap">
+                        <div class="text_wrap" id="m_main_text_1">
+                            <div class="title_wrap">
+                                <span>소비자 중심</span>
+                                <span>&nbsp;경영</span>
+                            </div>
+                            <span>인증 획득</span>
+                        </div>
+                    </article>
+                    
+                    <article class="m_con_wrap">
+                        <div class="text_wrap" id="m_main_text_2">
+                            <div class="title_wrap">
+                                <span>10</span>
+                                <span>년간</span>
+                            </div>
+                            <span>수리가능 서비스</span>
+                        </div>
+                    </article>
+                    
+                    <h1 class="scroll_down"></h1>
+                    
+                </section>
+                
+                
+                
+                <!-- m_section_2 -->
+                <section id="m_section_2">
+                    
+                    <!-- 제품 이미지 -->
+                    <div class="img_box"></div>
+                    
+                    <!-- 텍스트 -->
+                    <div class="text_box">
+                        <h1>주방용품</h1>
+                        <p>테팔의 주방용품은 최첨단 기술로 최고의 내구성은 물론, 최고로 맛있는 요리를 할 수 있게 도와줍니다.</p>
+                    </div>
+                
+                </section>
+                
+                
+                
+                
+                <!-- m_section_3 -->
+                <section id="m_section_3">
+                    
+                    <!-- 제품 이미지 -->
+                    <div class="img_box"></div>
+                    
+                    <!-- 텍스트 -->
+                    <div class="text_box">
+                        <h1>열 센서</h1>
+                        <p>테팔 프라이팬을 예열할 때 열센서의 무늬가 사라지는 온도가 누구나 전문 요리사처럼 맛있는 건강한 요리를 할 수 있는 최적의 온도입니다.</p>
+                    </div>
+                    
+                </section>
+                
+                
+                
+                <!-- m_section_4 -->
+                <section id="m_section_4">
+                    
+                    <!-- 제품 이미지 -->
+                    <div class="img_box"></div>
+                    
+                    <!-- 텍스트 -->
+                    <div class="text_box">
+                        <h1>믹서기</h1>
+                        <p>어떤 재료든 남김없이 완벽하게 분쇄하는 스테인리스 스틸 소재의 테팔 블렌드 포스 스틸 믹서기를 만나보세요.</p>
+                    </div>
+                    
+                </section>
+                
+                <!-- m_section_5 -->
+                <section id="m_section_5">
+                
+                     <!-- 제품 이미지 -->
+                    <div class="img_box"></div>
+                    
+                    <!-- 텍스트 -->
+                    <div class="text_box">
+                        <h1>4중 칼날</h1>
+                        <p>스테인리스 6중날과 3가지 모션, 1200W의 강력한 모터힘으로 요리가 더 편리하고 완벽해집니 다 1분당 28000번 회전하고 1200W의 강력한 모터로 최상의 분쇄력을 자랑합니다.</p>
+                    </div>
+                    
+                </section>
+                
+                
+                
+                <!-- m_section_6 -->
+                <section id="m_section_6">
+                    
+                    <!-- 제품 이미지 -->
+                    <div class="img_box"></div>
+                    
+                    <!-- 텍스트 -->
+                    <div class="text_box">
+                        <h1>전열조리기구</h1>
+                        <p>고기부터 토스트, 햄버거, 감자튀김, 아이 간식까지 적절 온도를 유지해서 맛있게 요리하는 테팔 전열조리기구를 만나보세요.</p>
+                    </div>
+                    
+                </section>
+                
+                
+                <!-- m_section_7 -->
+                <section id="m_section_7">
+                    
+                    <!-- 제품 이미지 -->
+                    <div class="img_box"></div>
+                    
+                    <!-- 텍스트 -->
+                    <div class="text_box">
+                        <h1>자동 센서</h1>
+                        <p>취향저격, 원하는 굽기로 구워주는 3단 요리상태 표시창! 더 바삭하게 먹고 싶다면, 굽기를 알려주는 알림창의 색을 확인하세요!</p>
+                    </div>
+                    
+                </section>
+                
+                
+                <!-- m_section_8 -->
+                <section id="m_section_8">
+                    <!-- 텍스트 -->
+                    <div class="text_box">
+                        <div class="text_top">
+                            <span class="red">행복한 맛</span>
+                            <span class="black">&nbsp;이 가득한</span>
+                        </div>
+                        <div class="bottom_top">
+                            <span class="black">테팔</span>
+                            <span class="red">&nbsp;레시피</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            
+            <!-- footer_wrap -->
+            <footer>
+                <div class="top_footer">
+                    
+                    <ul>
+                        <li>
+                            <a href="#">고객 서비스</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">그룹 세브</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">사이트맵</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">법적고지</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">회원가입</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">회원 정보 변경</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="bottom_footer">
+                    <h1></h1>
+                    <h3>COPYRIGHT 2018 TETAL. ALL RIGHTS RESERVED.</h3>
+                </div>
+            </footer>
+            
+        </div>
+        
+        
+        
+        
+	</body>
+</html>

@@ -1,0 +1,709 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>맥심커피</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<link href="css/pc.css" rel="stylesheet" type="text/css" />
+        <link href="css/note.css" rel="stylesheet" type="text/css" />
+        <link href="css/tab.css" rel="stylesheet" type="text/css" />
+		<link href="css/mobile.css" rel="stylesheet" type='text/css' />
+		<link href="css/swiper.css" rel="stylesheet" type='text/css' />
+		<link rel="shortcut icon" href="img/icon/maxim.ico" type="image/x-icon">
+		<style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul,li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #383838;
+            }
+            img {
+                border: 0;
+                float: left;
+            }
+            @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+            body {
+                font-family: 'Nanum Gothic', sans-serif;
+                color: #333;
+            }
+            .on {
+                background: #ffd904;
+            }
+            .but_color { background: #482205; }
+        </style>
+        <script src="js/jquery-3.3.1.js"></script>
+        <!--<script src="js/swiper.min.js"></script>-->
+        <script src="js/pc_banner.js"></script>
+        <script src="js/pc_menu.js"></script>
+        <script src="js/mobile.js"></script>
+        <script>
+            $(document).ready(function(){
+       
+                
+                var ww = $(window).width();
+                var wh = $(window).height();
+                
+                $('#m_menu_box').css({
+                    width:ww,
+                    height:wh
+                }).hide();
+                
+                
+                $(window).resize(function(){
+                    var ww= $(window).width();
+                    $('#m_menu_box').css({
+                        width:ww
+                    });
+                });
+                
+                var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+                
+                
+                
+                $('#m_menu').click(function() {
+                    $('#m_menu_box').show();
+                });
+                $('#x').click(function() {
+                    $('#m_menu_box').hide();
+                });
+                /*   모바일 카테고리 클릭시, 메뉴 보임   */
+                
+                $('.m_sub_menu').hide();
+                var m=0;
+                $('.m_main_menu').click(function(){
+                    if(m==0) {
+                        $(this).siblings().show();
+                        m++;
+                    }
+                    else if(m==1) {
+                        $(this).siblings().hide();
+                        m--;
+                    }
+                });
+                
+                /*     모바일 메뉴 클릭시 보임 숨김     */
+                
+                
+                
+                
+                
+                
+                var click_num=0;
+                
+                $('footer').find('.but').click(function(){
+                    if(click_num==0) {
+                        $(this).css({
+                            overflow:'visible'
+                        });
+                        click_num++;
+                        
+                    }else if(click_num==1) {
+                        $(this).css({
+                            overflow:'hidden'
+                        });
+                        click_num--;
+                    }
+                });
+            });
+        </script>
+	</head>
+
+	<body>
+	    <div id="wrap">
+	        
+	        <header>
+	            <div class="width_align">
+	                <div id="logo">
+	                    <a href="index.html">
+	                        <img src="img/logo/logo.png" title="logo" />
+	                    </a>
+	                </div>
+	                <div id="main_menu_wrap">
+	                    <ul id="menu_main">
+	                        <li class="main">
+	                            <a href="#">
+	                                브랜드 스토리
+                                </a>
+	                        </li>
+	                        <li class="main">
+	                            <a href="#">
+	                                제품
+	                            </a>
+	                        </li>
+	                        <li class="main">
+	                            <a href="#">
+	                                이벤트
+	                            </a>
+	                        </li>
+	                        <li class="main">
+	                            <a href="#">
+	                                소식
+	                            </a>
+	                        </li>
+	                        <li class="main">
+	                            <a href="#">
+	                                고객
+	                            </a>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <div id="sub_menu_wrap">
+	                    <ul id="sub_menu">
+	                        <li>
+	                            <a href="#">로그인</a>
+	                        </li>
+	                        <li>|</li>
+	                        <li>
+	                            <a href="#">마이페이지</a>
+	                        </li>
+	                        <li>|</li>
+	                        <li>
+	                            <a href="#">
+	                                <img src="img/icon/search.png" alt="검색" />
+	                            </a>
+	                        </li>
+	                    </ul>
+	                </div>
+	                
+	                <div id="m_menu">
+                        <img src="img/icon/m_menu.png" alt="menu" />
+                    </div>
+                    <!--    모바일 메뉴 아이콘  -->
+	            </div>
+                <!--    상위메뉴 끝  -->
+                <div id="in_sub_wrap">
+                    <div class="width_align">
+                        <div class="left_box">
+                            <div class="text_box">
+                                <li>
+                                    <a href="#">맥심</a>
+                                </li>
+                                <li>
+                                    <a href="#">히스토리</a>
+                                </li>
+                                <li>
+                                    <a href="#">브랜드 시그널</a>
+                                </li>
+                            </div>
+                            <ul class="text_box">
+                                <li>
+                                    <a href="#">유형별 제품</a>
+                                </li>
+                                <li>
+                                    <a href="#">라인별 제품</a>
+                                </li>
+                            </ul>
+                            <ul class="text_box">
+                                <li>
+                                    <a href="#">진행중인 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">종료된 이벤트</a>
+                                </li>
+                            </ul>
+                            <ul class="text_box">
+                                <li>
+                                    <a href="#">뉴스&공지</a>
+                                </li>
+                                <li>
+                                    <a href="#">TV CF</a>
+                                </li>
+                                <li>
+                                    <a href="#">맥심 채널</a>
+                                </li>
+                            </ul>
+                            <ul class="text_box">
+                                <li>
+                                    <a href="#">맥심 커뮤니티</a>
+                                </li>
+                                <li>
+                                    <a href="#">고객문의</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right_box">
+                            <div class="img_box">
+                                <img src="img/product/menu_product.png" alt="제품">
+                            </div>
+                            <div class="text_wrap">
+                                <h4>단맛을 줄여 더 깔끔해진</h4>
+                                <h3>모카골드 라이트</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--    하위메뉴 끝  -->
+	        </header>
+	        <!-- header 끝 -->
+	        
+
+            <div id="m_menu_box">
+                <header>
+                    <h1 id="m_logo">
+                        <img src="img/logo/logo.png" alt="logo" />
+                    </h1>
+                    <div id="x">
+                        <img src="img/icon/close.png" alt="close" />
+                    </div>
+                </header>
+                <div id="m_menu_wrap">
+                    
+                    <div class="menu_wrap">
+                        <div class="m_main_menu">
+                            <h3 class="main">브랜드 스토리</h3>
+                            <h3 class="arrow">&gt</h3>
+                        </div>
+                        <ul class="m_sub_menu">
+                            <li>
+                                <a href="#">맥심</a>
+                            </li>
+                            <li>
+                                <a href="#">히스토리</a>
+                            </li>
+                            <li>
+                                <a href="#">브랜드 시그널</a>
+                            </li>
+                        </ul>
+                    </div>
+                   
+                    <div class="menu_wrap">
+                        <div class="m_main_menu">
+                            <h3 class="main">제품</h3>
+                            <h3 class="arrow">&gt</h3>
+                        </div>
+                        <ul class="m_sub_menu">
+                            <li>
+                                <a href="#">유형별 제품</a>
+                            </li>
+                            <li>
+                                <a href="#">라인별 제품</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="menu_wrap">
+                        <div class="m_main_menu">
+                            <h3 class="main">이벤트</h3>
+                            <h3 class="arrow">&gt</h3>
+                        </div>
+                        <ul class="m_sub_menu">
+                            <li>
+                                <a href="#">진행중인 이벤트</a>
+                            </li>
+                            <li>
+                                <a href="#">종료된 이벤트</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="menu_wrap">
+                        <div class="m_main_menu">
+                            <h3 class="main">소식</h3>
+                            <h3 class="arrow">&gt</h3>
+                        </div>
+                        <ul class="m_sub_menu">
+                            <li>
+                                <a href="#">뉴스&공지</a>
+                            </li>
+                            <li>
+                                <a href="#">TV CF</a>
+                            </li>
+                            <li>
+                                <a href="#">맥심 채널</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="menu_wrap">
+                        <div class="m_main_menu">
+                            <h3 class="main">고객</h3>
+                            <h3 class="arrow">&gt</h3>
+                        </div>
+                        <ul class="m_sub_menu">
+                            <li>
+                                <a href="#">맥심 커뮤니티</a>
+                            </li>
+                            <li>
+                                <a href="#">고객문의</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--    m_menu_box 끝    -->
+	        
+	        <section id="section_1">
+	            <div id="mask">
+	                <div id="img_wrap">
+	                    <div class="banner">
+	                        <img src="img/banner/whitegold.jpg" alt="" />
+	                        <div class="text_wrap">
+                                <div class="width_align">
+                                    <div class="text_box">
+                                        <div class="title_wrap">
+                                            <h3>향이 깊은</h3><h2> &nbsp;화이트골드</h2>
+                                        </div>
+                                        <h4>우유와 잘 어울리는 원두를 직접 선별하여<br/> 우유를 넣어도 커피의 맛과 향이 살아있는 제품</h4>
+                                    </div>
+                                    <div class="but_wrap">
+                                        <div class="s_but">
+                                            <a href="#">자세히 보기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+	                    </div>
+                        
+	                    <div class="banner">
+	                        <img src="img/banner/kanu.jpg" alt="" />
+                            <div class="text_wrap">
+                                <div class="width_align">
+                                    <div class="right_box">
+                                        <div class="text_box">
+                                            <div class="title_wrap">
+                                                <h3>세상에서 가장 작은 카페</h3><h2> &nbsp;카누</h2>
+                                            </div>
+                                            <h4>원두커피의 퀄리티에 편리함을 더해<br/>언제 어디서나 막 뽑아낸 듯 한 신선함</h4>
+                                        </div>
+                                        <div class="but_wrap">
+                                            <div class="s_but">
+                                                <a href="#">자세히 보기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+	                    </div>
+	                    <div class="banner">
+	                        <img src="img/banner/tassimo.jpg" alt="" />
+                            <div class="text_wrap">
+                                <div class="width_align">
+                                    <div class="text_box">
+                                        <div class="title_wrap">
+                                            <h3>세계로 떠나는 커피여행,</h3><h2> &nbsp;타시모</h2>
+                                        </div>
+                                        <h4>메뉴에 따라 최적의 물, 시간, 온도를<br/> 알아서 조절해주는 커피머신!</h4>
+                                    </div>
+                                    <div class="but_wrap">
+                                        <div class="s_but">
+                                            <a href="#">자세히 보기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+	                    </div>
+	            </div>
+	            <div id="but_wrap">
+	                <div class="but"></div>
+	                <div class="but"></div>
+	                <div class="but"></div>
+	            </div>
+	        </div>
+	    </section>
+	        <!-- section_1 끝 -->
+	        
+	        <section id="m_banner">
+	            <div class="swiper-container" id="m_mask">
+	                <div class="swiper-wrapper" id="m_img_wrap">
+                        <div class="swiper-slide mobile_banner">
+                            <img src="img/banner/m_whitegold.jpg" alt="" />
+                            <div class="text_wrap">
+                                <div class="width_align">
+                                    <div class="text_box">
+                                        <h2>향이 깊은 화이트골드</h2>
+                                        <h4>원두커피의 퀄리티에 편리함을 더해<br/>언제 어디서나 막 뽑아낸 듯 한 신선함</h4>
+                                    </div>
+                                    <div class="but_box">
+                                        <a href="#">자세히 보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mobile_banner">
+                            <img src="img/banner/m_kanu.jpg" alt="" />
+                            <div class="text_wrap">
+                                <div class="width_align">
+                                    <div class="text_box">
+                                        <h2>세상에서 가장 작은 카페 카누</h2>
+                                        <h4>우유와 잘 어울리는 원두를 직접 선별하여<br/> 우유를 넣어도 커피의 맛과 향이 살아있는 제품</h4>
+                                    </div>
+                                    <div class="but_box">
+                                        <a href="#">자세히 보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mobile_banner">
+                            <img src="img/banner/m_tassimo.jpg" alt="" />
+                            <div class="text_wrap">
+                                <div class="width_align">
+                                    <div class="text_box">
+                                        <h2>세계로 떠나는 커피여행,<br/> 글로벌 브랜드 타시모</h2>
+                                        <h4>메뉴에 따라 최적의 물, 시간, 온도를<br/> 알아서 조절해주는 커피머신!</h4>
+                                    </div>
+                                    <div class="but_box">
+                                        <a href="#">자세히 보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+	            </div>
+                <div class="width_align">
+                    <div class="m_but_wrap">
+                        <div class="m_but but_color"></div>
+                        <div class="m_but"></div>
+                        <div class="m_but"></div>
+                    </div>
+                </div>
+	        </section>
+	        
+	        <section id="section_2">
+	            <div class="width_align">
+	                <div class="text_wrap">
+	                    <h3>Product</h3>
+	                    <div></div>
+	                </div>
+	                <div id="product_wrap">
+	                    <div class="product_box">
+                            <a href="#">
+	                            <div class="text_box">
+	                                <h3>TASSIMO</h3>
+	                                <h4>프리미엄 커피를 다양하게</h4>
+	                            </div>
+	                            <div class="img_box">
+	                                <img src="img/product/png_img_1.png" alt="" />
+	                            </div>
+	                        </a>
+	                    </div>
+	                    <div class="product_box">
+                            <a href="#">
+	                            <div class="text_box">
+	                                <h3>MAXIM ORIGINAL</h3>
+	                                <h4>내 입맛에 딱 맞는 정통커피</h4>
+                                </div>
+                                <div class="img_box">
+	                                <img src="img/product/png_img_2.png" alt="" />
+	                            </div>
+                            </a>
+	                    </div>
+	                    <div class="product_box">
+                            <a href="#">
+	                            <div class="text_box">
+	                                <h3>MOCHA GOLD</h3>
+	                                <h4>편안하게 즐기는 부드러운 커피</h4>
+	                            </div>
+	                            <div class="img_box">
+	                                <img src="img/product/png_img_3.png" alt="" />
+	                            </div>
+                            </a>
+	                    </div>
+	                    <div class="product_box">
+                            <a href="#">
+	                            <div class="text_box">
+	                                <h3>ARABICA 100</h3>
+	                                <h4>아라비카 원두의 깊고 풍부함</h4>
+	                            </div>
+	                            <div class="img_box">
+	                                <img src="img/product/png_img_4.png" alt="" />
+	                            </div>
+                            </a>
+	                    </div>
+	                    <div class="product_box">
+                            <a href="#">
+	                            <div class="text_box">
+	                                <h3>DECAFFEINATED</h3>
+	                                <h4>카페인 없이 즐기는 부드러운 커피</h4>
+	                            </div>
+	                            <div class="img_box">
+	                                <img src="img/product/png_img_5.png" alt="" />
+	                            </div>
+                            </a>
+	                    </div>
+	                    <div class="product_box">
+                            <a href="#">
+	                            <div class="text_box">
+	                                <h3>T.O.P</h3>
+	                                <h4>간편하게 즐기는 진한 에스프레소</h4>
+	                            </div>
+	                            <div class="img_box">
+	                                <img src="img/product/png_img_6.png" alt="" />
+	                            </div>
+                            </a>
+	                    </div>
+	                </div>
+	            </div>
+	        </section>
+	        <!-- section_2 끝 -->
+	        
+	        <section id="section_3">
+	            <div class="event_box">
+                    <div class="text_wrap">
+                        <h2>KANU<br/>Spring Blend</h2>
+                        <p>기분 좋은 설렘을 담은 대세 커피,<br/>카누 스프링 블렌드를 겟하고 싶다면?</p>
+                        <div class="event_but">
+                            <a href="#">이벤트 참여하기</a>
+                        </div>
+                    </div>
+                </div>
+	            <div class="event_box">
+                    <div class="text_wrap">
+                        <h2>WHITE GOLD<br/>Special Event</h2>
+                        <p class="event_box_2">화이트골드데이에 소중한 사람을<br/>태그하면 선물을 드려요!</p>
+                        <div class="event_but">
+                            <a href="#">이벤트 참여하기</a>
+                        </div>
+                    </div>
+                </div>
+	            <div class="event_box">
+                    <div class="text_wrap">
+                        <h2>YELLOW<br/>Mix Mug</h2>
+                        <p>노란 봄을 닮은 믹스 머그2 출시!<br/>빨리 만나보고 싶다면?</p>
+                        <div class="event_but">
+                            <a href="#">이벤트 참여하기</a>
+                        </div>
+                    </div>
+                </div>
+	        </section>
+	        <section id="m_section_3">
+	            <div class="swiper-container" id="m_evetn_mask">
+	                <div class="swiper-wrapper" id="m_event_img_wrap">
+	                    <div class="m_event_box">
+	                        <div class="width_align">
+	                            <div class="text_box">
+	                                <h3>KANU Spring Blend</h3>
+	                                <h4>카누 스프링 블렌드를 겟하고 싶다면?</h4>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="m_event_box">
+	                        <div class="width_align">
+	                            <div class="text_box">
+	                                <h3>WHITE GOLD DAY Event</h3>
+	                                <h4>소중한 사람을 태그하면 추첨해서 선물을 드려요!</h4>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="m_event_box">
+	                        <div class="width_align">
+	                            <div class="text_box">
+	                                <h3>YELLOW Mix Mug</h3>
+	                                <h4>노란 봄을 닮은 믹스 머그2 출시!<br/>빨리 만나보고 싶다면?</h4>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+                <div class="width_align">
+                    <div class="sm_but_wrap">
+                        <div class="sm_but but_color"></div>
+                        <div class="sm_but"></div>
+                        <div class="sm_but"></div>
+                    </div>
+                </div>
+	        </section>
+	        <!-- section_3 끝 -->
+	        
+	        <section id="section_4">
+	                <div class="text_wrap">
+	                    <div class="img_box">
+	                        <img src="img/logo/brand_logo.png" alt="logo img" />
+	                    </div>
+	                    <div></div>
+	                    <div>
+	                        <h2>언제 어디서나 좋은 커피 맥심</h2>
+	                        <p>1980년 발매된 이후 동서식품의 주력브랜드로 성장한 맥심은 한국의 커피시장을 선도하는 시장점유율 1위의 No1. 브랜드로 확고한 시장 위치를 차지하고 있습니다. 맥심은 국내 커피 역사를 이끌어 온 정통성과  세계적인 기술력, 커피전문가의 노하우로 고품질의 커피 본연의 맛과 향을 즐길 수 있는 좋은 커피입니다.</p>
+	                        <p>맥심은 일상 속 작은 휴식과 여유이며, 새로운 기운을 불어 넣어줍니다. 마음과 마음이 이어지는 순간 맥심은 행복을 전해주는 좋은 커피로 다가갑니다.</p>
+	                    </div>
+	                </div>
+	        </section>
+	        <!-- section_4 끝 -->
+	        
+	        <section id="section_5">
+                <div class="width_align">
+                    <span>#언제 어디서나 좋은 커피</span>
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/insta/insta_1.jpg" alt="photo" />
+                        </a>
+                    </div>
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/insta/insta_2.jpg" alt="photo" />
+                        </a>
+                    </div>
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/insta/insta_3.jpg" alt="photo" />
+                        </a>
+                    </div>
+                </div>
+	        </section>
+            <!-- section_5 끝 -->
+            
+	        <footer>
+	            <div class="center_align">
+	                <ul class="left">
+                        <li class="b">
+                            <a href="#">개인정보처리방침</a>
+                        </li>
+                        <li>|</li>
+                        <li class="b">
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>|</li>
+                        <li class="b">
+                            <a href="#">이메일무단수집거부</a>
+                        </li>
+                        <li>|</li>
+                        <li>서울시 마포구 도화동 546번지 동서빌딩</li>
+                        <li>|</li>
+                        <li>전국대표전화번호 1588-2233</li>
+                    </ul>
+                    <ul class="white_line"></ul>
+                    <ul class="right">
+                        <li>ⓒ2018 DONG SUH FOOD. ALL RIGHT RESERVED.</li>
+                        <li class="but">
+                            <a href="#">▲ FAMILY SITE</a>
+                            <ul class="sub">
+                                <li>
+                                    <a href="#">동서식품</a>
+                                </li>
+                                <li>
+                                    <a href="#">MAXIM Kanu</a>
+                                </li>
+                                <li>
+                                    <a href="#">MAXIM Mocha Gold</a>
+                                </li>
+                                <li>
+                                    <a href="#">MAXIM White Gold</a>
+                                </li>
+                                <li>
+                                    <a href="#">MAXIM T.O.P</a>
+                                </li>
+                                <li>
+                                    <a href="#">MAXIM Tassimo</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+	            </div>
+                
+	        </footer>
+	        <!-- footer 끝 -->
+	    </div>
+	    <!--  끝 -->
+	</body>
+</html>
