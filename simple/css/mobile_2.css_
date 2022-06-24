@@ -49,7 +49,7 @@
     
     
     
-    #m_wrap>#m_menu_box { width: 100%; height: 100%; position: relative; z-index: 9; top: 0; background: #fde3e7;     opacity: 0.5; }
+    #m_wrap>#m_menu_box { width: 100%; height: 100%; position: relative; z-index: 9; top: 0; background: #fde3e7; }
     
     #m_wrap>#m_menu_box>#m_menu_header { width: 100%; height: 70px; position: absolute; background: #fde3e7; }
     
